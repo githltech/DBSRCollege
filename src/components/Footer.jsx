@@ -11,12 +11,48 @@ const Footer = () => {
         <div>
           <h3 className="text-teal-600 mb-4 ml-2">Find your Way</h3>
           <ul>
-            <li>Home</li>
-            <li>Site map</li>
-            <li>International students</li>
-            <li>About Collegeme</li>
-            <li>Current Students</li>
-            <li>Staff</li>
+            <li className="flex items-center">
+            <IoMdArrowDropright/>
+              <a href="" className="">
+              Home
+              </a>
+             </li>
+
+            <li className="flex items-center">
+            <IoMdArrowDropright/>
+              <a href="" className="">
+              Site map
+              </a>
+             </li>
+
+            <li className="flex items-center">
+            <IoMdArrowDropright/>
+              <a href="" className="">
+              International students
+              </a>
+             </li>
+
+            <li className="flex items-center">
+            <IoMdArrowDropright/>
+              <a href="" className="">
+              About Collegeme
+              </a>
+              </li>
+
+            <li className="flex items-center">
+            <IoMdArrowDropright/>
+              <a href="" className="">
+              Current Students
+              </a>
+              </li>
+
+            <li className="flex items-center">
+            <IoMdArrowDropright/>
+              <a href="" className="">
+              Staff
+              </a>
+              </li>
+
           </ul>
         </div>
         <div>
@@ -71,36 +107,42 @@ const Footer = () => {
           <h3 className="text-teal-600 mb-4 ml-2">Quick Links</h3>
           <ul>
             <li className="flex items-center">
+            <IoMdArrowDropright/>
               <a href="" className="">
               Directories
               </a>
               </li>
               
             <li className="flex items-center">
+            <IoMdArrowDropright/>
               <a href="" className="">
               Site map
               </a>
               </li>
               
             <li className="flex items-center">
+            <IoMdArrowDropright/>
               <a href="" className="">
               cMail | xMail
               </a>
               </li>
 
             <li className="flex items-center">
+            <IoMdArrowDropright/>
               <a href="" className="">
               Campus Notices
               </a>
               </li>
 
             <li className="flex items-center">
+            <IoMdArrowDropright/>
               <a href="" className="">
               Emergency Information
               </a>
               </li>
               
             <li className="flex items-center">
+            <IoMdArrowDropright/>
               <a href="" className="">
               Staff
               </a>
@@ -112,36 +154,42 @@ const Footer = () => {
           <h3 className="text-teal-600 mb-4 ml-2">Admission</h3>
           <ul>
             <li className="flex items-center">
+            <IoMdArrowDropright/>
               <a href="" className="">
               Business
               </a>
               </li>
 
             <li className="flex items-center">
+            <IoMdArrowDropright/>
               <a href="" className="">
               Financial Aid
               </a>
               </li>
 
             <li className="flex items-center">
+            <IoMdArrowDropright/>
               <a href="" className="">
               Graduate
               </a>
               </li>
 
             <li className="flex items-center">
+            <IoMdArrowDropright/>
               <a href="" className="">
               Law
               </a>
               </li>
 
             <li className="flex items-center">
+            <IoMdArrowDropright/>
               <a href="" className="">
               Undergraduate
               </a>
               </li>
 
             <li className="flex items-center">
+            <IoMdArrowDropright/>
               <a href="" className="">
               School
               </a>
