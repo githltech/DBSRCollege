@@ -1,9 +1,11 @@
 {
   "name": "vite-project",
   "private": true,
+  "homepage": " https://github.com/githltech/Dbsrcollege.com.git",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
