@@ -14,7 +14,7 @@ const  App = ()  =>{
 
   return (
     <>
-    <Router>
+    <Router basename="/DBSRCollege">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='aboutus' element = {<AboutUsPage/>}/>

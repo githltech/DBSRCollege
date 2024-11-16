@@ -182,7 +182,7 @@ const Footer = () => {
               </li>
             <li className="flex items-center gap-1">
               <TbBrandOpera icon="opera" />
-               info@college.com
+               Dbsr@gmail.com
                </li>
             <li className="flex items-center gap-1 text-blue-600">
               <SiGooglemaps/>
@@ -192,8 +192,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center border-t border-gray-300 mt-8 pt-4 px-4 ">
-        <p className="text-sm font-semibold text-gray-600">&copy; 2011 Dbsr College Site All Rights Reserved</p>
+      <div className="flex flex-col md:flex-row justify-between space-y-1 items-center border-t border-gray-300 mt-8 pt-4 px-4 ">
+        <p className="text-sm font-semibold text-gray-600">&copy; 2044 Dbsr College Site All Rights Reserved</p>
+        <p className="text-sm font-semibold text-gray-600">Developed By <a href="https://hltechindia.com/" className="hover:text-red-600 underline">© 2024, HL Tech India Pvt. Ltd.</a></p>
         
         {/* "Top" link with Arrow Icon */}
         {/* <a href="#" className="text-blue-600 flex items-center space-x-1 hover:text-teal-800">

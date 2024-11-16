@@ -14,7 +14,7 @@ import AboutDbsr from '../components/AboutDbsr';
 import NewsMedia from '../components/NewsMedia';
 import WhyDbsr from '../components/WhyDbsr';
 import StatisticsSection from '../components/StatisticsSection';
-import SearchForm from '../components/SearchForm';
+//import SearchForm from '../components/SearchForm';
 //import Dropdown from '../components/Dropdown';
 //import ReviewScroll from '../components/ReviewScroll';
 const Home = () =>{
@@ -31,8 +31,8 @@ const Home = () =>{
         <Gallery/>
         <FacultyDetails/>
         <Courses/>
-        <SearchForm/>
         <Testimonials/>
+        {/* <SearchForm/> */}
         <WhyDbsr/>
         <FAQSection/>
         {/* <ContactSection/> */}

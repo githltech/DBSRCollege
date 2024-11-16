@@ -119,11 +119,13 @@ const Navbar = () => {
       <div className="px-4 py-4 flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center space-x-4">
+          <a href="/" className="">
           <img
             src="https://dbsrcollege.in/wp-content/uploads/2023/03/DBSRlogo_PJ.webp"
             alt="Dbsr Logo"
             className="h-8 bg-white"
           />
+          </a>
            <h1 className="block lg:hidden text-sm sm:text-xl md:text-2xl font-semibold">Dr. Bhagat Singh Rai Institute of technology</h1>
 
         </div>
@@ -178,7 +180,7 @@ const Navbar = () => {
               
               {/* Mobile Dropdown */}
               {openDropdown === index && item.subItems && (
-                <div className="bg-white text-black text-[12px]">
+                <div className="bg-white text-black text-[15px]">
                   {item.subItems.map((subItem, subIndex) => (
                     <Link  
                       to={subItem.href}
