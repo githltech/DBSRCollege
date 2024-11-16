@@ -9,24 +9,23 @@ const leadershipProfiles = [
   {
     name: "Dr. John Doe",
     title: "Principal",
-    description: `"With over 20 years of experience, Dr. Doe leads our institution with a vision of excellence and innovation.With over 20 years of experience, Dr. Doe leads our institution with a vision of excellence and innovation.With over 20 years of experience, Dr. Doe leads our institution with a vision of excellence and innovation. Dr. Doe leads our institution with a vision of excellence and innovation.."`,
-    imageUrl: "https://www.inspirationschoolkgm.org/images/MrAnurag%20Mathur2022_HOME.jpg", // Replace with a relevant image URL
+    description: `"With over 20 years of experience, Dr. Doe leads our institution with a vision of excellence and innovation.With over 20 years of experience, Dr. Doe leads our institution with a vision of excellence and innovation.With over 20 years of experience, Dr. Doe leads our institution with a vision of excellence and innovation. Dr. Doe leads our institution with a vision of excellence and innovation.Dr. Doe leads our institution with a vision of excellence and innovation. Dr. Doe leads our institution with a vision of excellence and innovation.Dr. Doe leads our institution with a vision of excellence and innovation. Dr. Doe leads our institution with a vision of excellence and innovation."`,
+    imageUrl: "https://www.jsspublicschoolbage.com/jss/wp-content/uploads/2022/05/Image_3-1.png",
   },
   {
     name: "Mr. Jane Smith",
     title: "Chairman",
-    description: `"Mr. Smith has been instrumental in guiding our institution towards a brighter future with his strategic insights.Mr. Smith has been instrumental in guiding our institution towards a brighter future with his strategic insights.Mr. Smith has been instrumental in guiding our institution towards a brighter future with his strategic insights"`,
-    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKXsd_yT6FdxH5GTz_7rJvp-__YoxIECY7Sw&s", // Replace with a relevant image URL
+    description: `"Mr. Jane Smith has been instrumental in guiding our institution towards a brighter future with his strategic insights.Mr. Smith has been instrumental in guiding our institution towards a brighter future with his strategic insights.Mr. Smith has been instrumental in guiding our institution towards a brighter future with his strategic insights.Dr. Doe leads our institution with a vision of excellence and innovation. Dr. Doe leads our institution with a vision of excellence and innovation.Dr. Doe leads our institution with a vision of excellence and innovation."`,
+    imageUrl: "https://induschampsschool.edu.in/wp-content/uploads/2020/02/1-1-scaled-1000x499.jpg",
   },
-  // Add more profiles as needed
 ];
 
 const PrincipleAndchairmen = () => {
   return (
-    <section className=" py-10" id="leadership">
-      <div className=" px-6 text-center mb-4">
-        <h2 className="text-3xl font-bold text-gray-800">Our Leadership</h2>
-        <p className="text-gray-600 text-sm mt-2">
+    <section className=" py-10 bg-[#2B334F]" id="leadership">
+      <div className=" px-6 text-center">
+        <h2 className="text-3xl font-bold text-white">Our Leadership</h2>
+        <p className="text-white text-sm mt-2">
           Meet the leaders driving our institution’s vision and growth.
         </p>
       </div>
@@ -44,16 +43,27 @@ const PrincipleAndchairmen = () => {
       >
         {leadershipProfiles.map((profile, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col sm:flex-row gap-6 bg-white shadow-lg  p-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-12 px-10">
+              <div className="relative">
+              <div class="absolute px-5 top-[-30px] left-[-30px] w-full h-full border-[13px] border-red-600"></div>
               <img
                 src={profile.imageUrl}
                 alt={profile.name}
-                className="sm:w-1/3 sm:h-80 h-full  object-cover shadow-md "
+                className="w-full h-full object-cover shadow-md relative"
               />
+              </div>          
              <div className="">
-             <h3 className="text-2xl font-semibold text-red-600">{profile.name}</h3>
-              <p className="text-indigo-600 font-medium mb-2">{profile.title}</p>
-              <p className="text-gray-800 font-semibold">{profile.description}</p>
+             <h3 className="text-3xl font-semibold text-white">{profile.name}</h3>
+              <p className="text-red-500 font-medium mb-2">{profile.title}</p>
+              <p className="text-white font-sans mb-5 text-xs sm:text-sm">{profile.description}</p>
+
+              <div class="relative inline-block mt-4">
+             <a href='/' class="relative bg-red-700 text-white px-4 py-2 font-semibold focus:outline-none overflow-hidden group">
+             <span class="absolute inset-0 bg-black transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
+            <span class="absolute inset-0 bg-black transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
+            <span class="relative z-10">View Details &rarr;</span>
+            </a>
+          </div>
              </div>
             </div>
           </SwiperSlide>

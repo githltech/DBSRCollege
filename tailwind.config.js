@@ -4,6 +4,11 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    "hover:before:h-[400%]",
+    "before:h-0",
+    "before:transition-all",
+  ],
   theme: {
     extend: {
       wordSpacing: {

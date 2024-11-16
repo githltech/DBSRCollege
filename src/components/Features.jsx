@@ -12,17 +12,17 @@ const Features = () => {
       </div>
 
       {/* Card 2 */}
-      <div className="bg-gray-300 p-6">
+      <div className="bg-blue-900 p-6">
         <h3 className="text-2xl font-semibold mb-2">
-          <span className="border-l-4 border-red-600 pl-2">Skilled Lecturers</span>
+          <span className="border-l-4 border-red-600 pl-2 text-white">Skilled Lecturers</span>
         </h3>
-        <p className="text-gray-800">Nibh vivamus imperdiet sed odio nullam mi elit pellentesque</p>
+        <p className="text-gray-200">Nibh vivamus imperdiet sed odio nullam mi elit pellentesque</p>
       </div>
 
       {/* Card 3 */}
-      <div className="bg-blue-900 p-6 text-white">
+      <div className="bg-red-600 p-6 text-white">
         <h3 className="text-2xl font-semibold mb-2">
-          <span className="border-l-4 border-red-600 pl-2">Scholarship Facility</span>
+          <span className="border-l-4 border-blue-600 pl-2">Scholarship Facility</span>
         </h3>
         <p>Nostra nascetur commodo ipsum cubilia ultrices curabitur. Eleifend tempus nec orci conubia mauris dui porta.</p>
       </div>

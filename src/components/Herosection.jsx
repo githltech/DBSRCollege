@@ -30,7 +30,7 @@ const bannerImages = [
   },
 ];
 
-const HeroSection = () => {
+const Herosection = () => {
   return (
     <section className="">
       <Swiper
@@ -49,27 +49,32 @@ const HeroSection = () => {
         {bannerImages.map((banner, index) => (
           <SwiperSlide key={index}>
            
-         {/* HeroSection banner */}
-       <div className="relative bg-cover bg-center h-80 lg:h-[35rem]" style={{ backgroundImage: `url(${banner.url})` }}>
+         {/* Herosection banner */}
+       <div className="relative bg-cover bg-center h-64 sm:h-80 lg:h-screen" style={{ backgroundImage: `url(${banner.url})` }}>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-60 flex flex-col justify-center items-center text-center">
           <span className="text-sm uppercase text-red-500 bg-white border-gray-200 p-1 font-semibold tracking-widest mb-2">About Campus</span>
           <h1 className=" text-2xl sm:text-4xl text-white font-semibold">{banner.title}</h1>
-          <p className="text-white mt-4 max-w-xl mx-auto text-xs sm:text-xl">
+          <p className="text-white mt-2 max-w-xl mx-auto text-xs sm:text-xl">
            {banner.description}
           </p> 
+          
          <div className="flex gap-4 mt-4">
-         <a
-            href="#about"
-            className="sm:px-6 sm:py-2 px-3 py-1 bg-red-700  hover:bg-red-500 text-white font-semibold transition duration-300 ease-in-out"
-            >
-            Apply Now
-            </a>
-            <a
-            href="#about"
-            className="sm:px-6 sm:py-2 px-3 py-1 border-2 border-gray-100 hover:bg-blue-800 text-white font-semibold transition duration-300 ease-in-out"
-            >
-            Our Mission
-            </a>
+         <div class="relative inline-block">
+         <a href="/" class="relative bg-red-700 text-white px-4 py-2 font-semibold focus:outline-none overflow-hidden group">
+         <span class="absolute inset-0 bg-black transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
+         <span class="absolute inset-0 bg-black transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
+         <span class="relative z-10">Apply Now &rarr;</span>
+        </a>
+        </div>
+
+<div class="relative inline-block">
+  <a href="/" class="relative bg-black text-white px-4 py-2 font-semibold focus:outline-none overflow-hidden group">
+    <span class="absolute inset-0 bg-red-700 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
+    <span class="absolute inset-0 bg-red-700 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
+    <span class="relative z-10">Application form &rarr;</span>
+  </a>
+</div>
+
          </div>
         </div>
       </div>
@@ -80,4 +85,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Herosection;

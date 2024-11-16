@@ -86,11 +86,11 @@ const facultyDetails = () => {
   return (
     <section className="py-10 bg-gray-200">
       <div className="text-center">
-        <h2 className="text-orange-600 font-semibold">
+        <h2 className="text-orange-600 font-semibold px-4">
           YOUR COLLEGE JOURNEY, OUR COMMITMENT: GET TO KNOW THE TEAM SHAPING YOUR FUTURE
         </h2>
         <h1 className="text-4xl font-bold mt-2">OUR TEAM</h1>
-        <div className="h-1 w-16 bg-orange-500 mx-auto mt-4 mb-8"></div>
+        <div className="h-1 w-20 bg-orange-500 mx-auto mt-4 mb-8"></div>
 
         <div className="relative flex items-center justify-center">
           <button
@@ -109,7 +109,7 @@ const facultyDetails = () => {
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
-                  className="min-w-[220px] max-w-[220px] bg-white rounded-lg p-6 shadow-lg text-center mx-auto"
+                  className="min-w-[220px] max-w-[220px] bg-white shadow-red-100 p-6 shadow-lg text-center mx-auto border border-gray-300"
                 >
                   <img
                     src={member.image}

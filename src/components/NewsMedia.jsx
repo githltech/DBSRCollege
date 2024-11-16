@@ -15,19 +15,19 @@ const NewsMedia = () => {
       image: "https://dbsrcollege.in/wp-content/uploads/2023/09/event1.jpg",
     },
     {
-      title: "MOU Signing Between MITCON Consultancy and LNCP",
+      title: "MOU Signing Between MITCON Consultancy and DBSR",
       author: "admin",
       date: "October 21, 2024",
       image: "https://dbsrcollege.in/wp-content/uploads/2023/09/news2.jpg",
     },
     {
-        title: "MOU Signing Between MITCON Consultancy and LNCP",
+        title: "MOU Signing Between MITCON Consultancy and DBSR",
         author: "admin",
         date: "October 21, 2024",
         image: "https://dbsrcollege.in/wp-content/uploads/2023/09/g3.jpg",
       },
       {
-        title: "MOU Signing Between MITCON Consultancy and LNCP",
+        title: "MOU Signing Between MITCON Consultancy and DBSR",
         author: "admin",
         date: "October 21, 2024",
         image: "https://dbsrcollege.in/wp-content/uploads/2023/03/traget-2048x716.jpg",
@@ -39,7 +39,7 @@ const NewsMedia = () => {
     <div className="px-4 py-10">
     {/* Section Title */}
    <div className="flex justify-between items-center mb-4">
-   <h2 className=" bg-blue-600 text-white px-4 py-2 font-semibold sm:text-sm text-xs">News & Media</h2>
+   <h2 className="bg-[#2B334F] text-white px-4 py-2 font-semibold sm:text-sm text-xs">News & Media</h2>
     <button className=" bg-red-600 text-white px-4 py-2 font-semibold sm:text-sm text-xs">
           JOIN US AND BECOME A PART
         </button>
@@ -59,7 +59,7 @@ const NewsMedia = () => {
           <div key={index} className="flex space-x-4 bg-white p-4 shadow-lg">
             <img src={news.image} alt="news-thumbnail" className="w-20 h-20 object-cover rounded-lg" />
             <div className="flex-1">
-              <h4 className="text-sm font-semibold hover:text-red-600 mb-2">{news.title}</h4>
+              <a href='/' className="text-sm font-semibold hover:text-red-600 mb-2 hover:underline">{news.title}</a>
               <div className="flex items-center text-xs text-blue-600">
                 <span className="material-icons mr-1">person</span> {news.author}
                 <span className="material-icons mx-1">calendar_today</span> {news.date}

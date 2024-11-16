@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FaChevronDown ,FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { IoMdArrowDropright } from "react-icons/io";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,9 +20,17 @@ const Navbar = () => {
     { 
       name: "COURSES",
       subItems:[
-        { name: "Course 1" },
-        { name: "Course 2" },
-        { name: "Course 3" },
+        { name: "D.Pharma" },
+        { name: "B.Pharma" },
+        { name: "B.SC" },
+        { name: "M.SC" },
+        { name: "MBA" },
+        { name: "BBA" },
+        { name: "BCA" },
+        { name: "MCA" },
+        { name: "B.Tech" },
+        { name: "M.Tech" },
+
       ] 
      },
 
@@ -29,8 +39,17 @@ const Navbar = () => {
       subItems: [
         { name: "Computer Science", href: "/departments/computer-science" },
         { name: "Electronics", href: "/departments/electronics" },
-        { name: "Mechanical", href: "/departments/mechanical" },
-        { name: "Civil", href: "/departments/civil" },
+        { name: "Mechanical Engineering", href: "/departments/mechanical" },
+        { name: "Department of English", href: "/departments/civil" },
+        { name: "Department of Civil", href: "/departments/civil" },
+        { name: "Department of Hindi", href: "/departments/civil" },
+        { name: "Mathematical Sciences", href: "/departments/civil" },
+        { name: "Department of Biochemistry", href: "/departments/civil" },
+        { name: "Management", href: "/departments/civil" },
+        { name: "Chemistry Department", href: "/departments/civil" },
+        { name: "Department of Agriculture", href: "/departments/civil" },
+        
+
       ],
     },
     {
@@ -81,7 +100,7 @@ const Navbar = () => {
     {
       name: "CONTACT",
       subItems: [
-        { name: "Contact Us", href: "/contact/us" },
+        { name: "Contact Us", href: "/contactus" },
         { name: "Contact Information", href: "/contact/info" },
       ],
     },
@@ -103,9 +122,10 @@ const Navbar = () => {
           <img
             src="https://dbsrcollege.in/wp-content/uploads/2023/03/DBSRlogo_PJ.webp"
             alt="Dbsr Logo"
-            className="h-8"
+            className="h-8 bg-white"
           />
-         
+           <h1 className="block lg:hidden text-sm sm:text-xl md:text-2xl font-semibold">Dr. Bhagat Singh Rai Institute of technology</h1>
+
         </div>
 
         {/* Desktop Menu */}
@@ -117,15 +137,17 @@ const Navbar = () => {
               </button>
               {/* Desktop Dropdown */}
               {item.subItems && (
-                <div className="absolute hidden group-hover:block bg-white text-gray-800 mt-1 py-2 w-48 shadow-lg font-semibold">
+                <div className="absolute hidden group-hover:block bg-white text-gray-800 mt-1 py-2 w-44 shadow-lg font-semibold border-2 border-t-red-600 text-[12px]">
                   {item.subItems.map((subItem, subIndex) => (
                    <Link
                       to={subItem.href}
                       key={subIndex}
-                      className="block px-4 py-2 hover:bg-black/80 hover:text-white"
+                      className="block px-4 py-1 hover:bg-black/80 hover:text-white flex items-center gap-1"
                     >
+                      <IoMdArrowDropright/>
                       {subItem.name}
                     </Link>
+                    
                   ))}
                 </div>
               )}
@@ -151,18 +173,19 @@ const Navbar = () => {
                 className="w-full flex justify-between items-center px-4 py-2"
               >
                 <span>{item.name}</span>
-                {item.subItems && <FaChevronDown className="text-sm" />}
+                {item.subItems && <FaChevronDown className="text-xs" />}
               </button>
               
               {/* Mobile Dropdown */}
               {openDropdown === index && item.subItems && (
-                <div className="bg-white text-black">
+                <div className="bg-white text-black text-[12px]">
                   {item.subItems.map((subItem, subIndex) => (
                     <Link  
                       to={subItem.href}
                       key={subIndex}
-                      className="block px-4 py-2 hover:bg-gray-400"
+                      className="block px-4 py-1 hover:bg-gray-400 flex items gap-1"
                     >
+                      <IoMdArrowDropright className="mt-[2px]"/>
                       {subItem.name}
                     </Link>
                   ))}

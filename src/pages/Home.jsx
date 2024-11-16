@@ -10,10 +10,11 @@ import Gallery from '../components/Gallary';
 import FAQSection from '../components/FAQSection';
 import Features from '../components/Features';
 import AboutDbsr from '../components/AboutDbsr';
-import ContactSection from '../components/ContactSection';
+// import ContactSection from '../components/ContactSection';
 import NewsMedia from '../components/NewsMedia';
 import WhyDbsr from '../components/WhyDbsr';
 import StatisticsSection from '../components/StatisticsSection';
+import SearchForm from '../components/SearchForm';
 //import Dropdown from '../components/Dropdown';
 //import ReviewScroll from '../components/ReviewScroll';
 const Home = () =>{
@@ -30,10 +31,11 @@ const Home = () =>{
         <Gallery/>
         <FacultyDetails/>
         <Courses/>
+        <SearchForm/>
         <Testimonials/>
         <WhyDbsr/>
         <FAQSection/>
-        <ContactSection/>
+        {/* <ContactSection/> */}
        </Layout>
         </>
     );

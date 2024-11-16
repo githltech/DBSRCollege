@@ -1,4 +1,6 @@
 import React from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
+
 
 const galleryItems = [
   { id: 1, image: "https://dbsrcollege.in/wp-content/uploads/2023/09/g9.jpg", alt: "Image 1" },
@@ -17,22 +19,26 @@ const galleryItems = [
 
 const Gallery = () => {
   return (
-    <div className="py-10 px-4 bg-[#2B334F]">
-        <h2 className=" bg-blue-600 inline-block mb-4 text-white px-4 py-2 font-semibold sm:text-sm text-xs">DBSR gallary</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {galleryItems.map((item) => (
-          <div
-            key={item.id}
-            className="relative group overflow-hidden shadow-lg transition-transform transform hover:scale-105"
-          >
+    <div className="bg-[#2B334F] text-white py-10">
+      <div className="text-center mb-8">
+      <h2 className="text-3xl font-semibold text-center mb-8">DBSR Gallary</h2>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 overflow-hidden">
+        {galleryItems.map((item, index) => (
+          <div key={index} className="relative bg-white text-black shadow-md shadow-pink-100 overflow-hidden hover-zoom transition-transform duration-300 fade-in hover:shadow-lg hover:shadow-pink-100">
             <img
               src={item.image}
-              alt={item.alt}
-              className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-80"
+              className="w-full h-60 object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span className="text-white text-lg font-semibold">View Image</span>
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <div className="p-4">
+              <div className="flex items-center gap-1">
+                <a href="/" className="text-lime-400 font-medium hover:border-b-[1px] border-lime-400">view Image</a>
+                <FaArrowRightLong className="text-lime-400 mt-1"/>
+              </div>
             </div>
+              </div>
+            
           </div>
         ))}
       </div>
