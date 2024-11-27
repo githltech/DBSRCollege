@@ -52,7 +52,7 @@ const Herosection = () => {
          {/* Herosection banner */}
        <div className="relative bg-cover bg-center h-64 sm:h-80 lg:h-screen" style={{ backgroundImage: `url(${banner.url})` }}>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-60 flex flex-col justify-center items-center text-center">
-          <span className="text-sm uppercase text-red-500 bg-white border-gray-200 p-1 font-semibold tracking-widest mb-2">About Campus</span>
+          <span className="text-sm uppercase text-red-500 bg-white border-gray-200 p-1 font-semibold tracking-widest mb-2">About University</span>
           <h1 className=" text-2xl sm:text-4xl text-white font-semibold">{banner.title}</h1>
           <p className="text-white mt-2 max-w-xl mx-auto text-xs sm:text-xl">
            {banner.description}
