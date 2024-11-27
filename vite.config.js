@@ -6,11 +6,10 @@ export default defineConfig({
   plugins: [react()],
   base: '/DBSRCollege/',
   build: {
-    outDir: 'dist', // Default folder for build output
-    emptyOutDir: true, // Clears the output directory before building
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+      },
+    },
   },
-  server: {
-    port: 3000, // Optional: Set a custom development server port
-    open: true, // Optional: Automatically open the app in the browser during development
-  },
 })
