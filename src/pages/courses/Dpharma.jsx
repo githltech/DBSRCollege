@@ -11,242 +11,227 @@ function Dpharma() {
   return (
     <>
     <Layout>
-	<div className="wrapper px-4">
+
+  
+  
+
+
+<main class="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-3 lg:px-8">
+  
+  <div class="text-center flex space-x-5 ">
+  <div className="flex justify-start items-center ">
+      <a href="/">
+        <img src="https://dbsrcollege.in/wp-content/uploads/2023/03/DBSRlogo_PJ.webp" alt="Logo" className="w-52 h-52" />
+      </a>
+    </div>
+
+    <div className="">
+    <p class="text-base font-semibold text-indigo-600"></p>
+    <h1 class="mt-4 text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Course Details</h1>
+    <p class="mt-6 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8"><p>
+    "D Pharma program offers essential pharmacy knowledge, healthcare and pharmaceuticals."
+        </p></p>
+    </div>
+   
+    <div class="mt-10 flex items-center justify-center gap-x-6">
+     
+    <i className="fa fa-map-marker text-yellow-400" />
+      <a href="#" class="text-sm font-semibold text-gray-900"> Amla, Sarvar Road, Near Ratibad,
+      <span className="block">Bhopal. (M.P.)</span> <span aria-hidden="true"></span></a>
+      <i className="fa fa-phone text-green-400" />
+      <a href="#" class="text-sm font-semibold text-gray-900"> Admission Cell:
+      <span className="block">7771012716, 9300312145, 7771012718</span></a>
+    </div>
+  </div>
+</main>
+
+      
+    <div className="wrapper px-4">
   {/* HEADER */}
   <header>
-  <div className="pt-10 pb-10">
-  <div className="container mx-auto">
-    <div className="flex flex-wrap">
-      <div className="w-full sm:w-1/4">
-        <p className="text-xl font-cursive">
-          महाराणा प्रताप प्रबंधन संस्थान
+  
+
+
+    <div className="sticky top-0 z-50 bg-white shadow-md">
+      <nav className="navbar flex justify-between items-center py-4 px-6">
+        <div className="flex items-center">
+          <button
+            className="lg:hidden text-xl"
+            type="button"
+            id="menu_toggler"
+          >
+            <i className="fa fa-bars" />
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  
+
+
+  <section className="pt-8 pb-8">
+    <div className="flex flex-col sm:flex-row">
+      <div className="w-44 sm:w-1/4 mt-8 sm:mt-0 sm:mr-8">
+        <div className="mt-8">
+          <a href="#!">
+            <img src="https://www.mpcmbhopal.org/img/model1.jpg" alt="Course Image" className="w-full" />
+          </a>
+        </div>
+        <div className="mt-8">
+          <ul className="space-y-4">
+            <li><a href="course-details.php" className="text-blue-500 hover:bg-gray-600 hover:text-white">D Pharma</a></li>
+            <li><a href="course-pharmacology.php" className="text-blue-500 hover:text-blue-700">Pharmacology</a></li>
+            <li><a href="course-pharmaceutical-analysis.php" className="text-blue-500 hover:text-blue-700">Pharmaceutical Analysis</a></li>
+            <li><a href="course-clinical-pharmacy.php" className="text-blue-500 hover:text-blue-700">Clinical Pharmacy</a></li>
+            <li><a href="course-medicinal-chemistry.php" className="text-blue-500 hover:text-blue-700">Medicinal Chemistry</a></li>
+            <li><a href="course-pharmacognosy.php" className="text-blue-500 hover:text-blue-700">Pharmacognosy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="w-full sm:w-3/4">
+        <div className="space-y-8">
+          <div>
+            <h2 className="text-3xl font-semibold">Diploma in Pharmacy [D Pharma]</h2>
+            <p className="mt-4 text-lg">
+              As an aspirant seeking a D Pharma qualification, you require a rigorous learning experience in a highly supportive environment capable of providing you with skills recognized in the pharmacy industry. Our D Pharma program offers it all.
+            </p>
+          </div>
+
+          {/* Accordion 1 - About D Pharma */}
+          <div className="bg-gray-100 p-4 rounded-lg">
+            <div className="flex justify-between items-center cursor-pointer" onClick={() => setOpenAbout(!openAbout)}>
+              <p className="font-semibold text-lg">About D Pharma</p>
+              <i className={`fa ${openAbout ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+            </div>
+            {openAbout && (
+              <div className="mt-4">
+                <strong>Course Description:</strong>
+                <ul className="list-disc pl-6">
+                  <li>Our D Pharma program is a skills-oriented qualification designed for individuals aspiring to work in the pharmaceutical industry. The course integrates cutting-edge curriculum with hands-on learning at state-of-the-art facilities.</li>
+                </ul>
+                <strong className="mt-4">Recognitions</strong>
+                <ul className="list-disc pl-6">
+                  <li>The 2-Year, Full-Time D Pharma is a diploma program approved by Pharmacy Council of India (PCI), New Delhi, and affiliated to Barkatullah University, Bhopal.</li>
+                  <li>MPCM Bhopal is among the top 100 Pharmacy Schools in India.</li>
+                </ul>
+                <p><strong>Location:</strong> Bhopal</p>
+                <p><strong>Course Type:</strong> Full-Time</p>
+                <a href="contact.php" className="text-blue-500 hover:text-blue-700">Apply Now <i className="fa fa-chevron-circle-right"></i></a>
+              </div>
+            )}
+          </div>
+
+          {/* Accordion 2 - How to Apply */}
+          <div className="bg-gray-100 p-4 rounded-lg">
+            <div className="flex justify-between items-center cursor-pointer" onClick={() => setOpenApply(!openApply)}>
+              <p className="font-semibold text-lg">How to Apply for D Pharma</p>
+              <i className={`fa ${openApply ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+            </div>
+            {openApply && (
+              <div className="mt-4">
+                <strong>To Apply for D Pharma:</strong>
+                <ul className="list-disc pl-6">
+                  <li>Candidate should have passed 10+2 with Physics, Chemistry, and Biology as core subjects.</li>
+                  <li>Students in their final year of 10+2 examinations from recognized boards are also eligible to apply.</li>
+                  <li>Admissions are conducted via entrance exams or based on qualifying examination marks as per institutional guidelines.</li>
+                  <li>Notification regarding exam dates is published in major newspapers and institutional websites.</li>
+                </ul>
+                <strong className="mt-4">Note</strong>
+                <ul className="list-disc pl-6">
+                  <li>Candidates who meet the eligibility but missed the entrance exam can apply through direct admissions.</li>
+                </ul>
+                <a href="contact.php" className="text-blue-500 hover:text-blue-700">Apply Now <i className="fa fa-chevron-circle-right"></i></a>
+              </div>
+            )}
+          </div>
+
+          {/* Accordion 3 - Admission Process */}
+          <div className="bg-gray-100 p-4 rounded-lg">
+            <div className="flex justify-between items-center cursor-pointer" onClick={() => setOpenAdmission(!openAdmission)}>
+              <p className="font-semibold text-lg">Admission Process</p>
+              <i className={`fa ${openAdmission ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+            </div>
+            {openAdmission && (
+              <div className="mt-4">
+                <strong>The admission process is as follows:</strong>
+                <ul className="list-disc pl-6">
+                  <li>Admissions are based on qualifying marks in 10+2 or equivalent as per guidelines issued by regulatory authorities.</li>
+                  <li>Shortlisted candidates are required to verify their documents and pay the requisite fee to confirm admission.</li>
+                </ul>
+                <a href="contact.php" className="text-blue-500 hover:text-blue-700">Apply Now <i className="fa fa-chevron-circle-right"></i></a>
+              </div>
+            )}
+          </div>
+
+          {/* Accordion 4 - Eligibility & Fees */}
+          <div className="bg-gray-100 p-4 rounded-lg">
+            <div className="flex justify-between items-center cursor-pointer" onClick={() => setOpenEligibility(!openEligibility)}>
+              <p className="font-semibold text-lg">Eligibility & Fees</p>
+              <i className={`fa ${openEligibility ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+            </div>
+            {openEligibility && (
+              <div className="mt-4">
+                <strong>Eligibility Criteria:</strong>
+                <ul className="list-disc pl-6">
+                  <li>Candidate must be an Indian citizen and have completed 10+2 with at least 50% marks in PCB.</li>
+                  <li>For Reserved Category Candidates, the minimum requirement is 45%.</li>
+                </ul>
+                <strong className="mt-4">Fees</strong>
+                <p>The total course fees for the D Pharma program at MPCM are Rs. 1,20,000/- for the two-year course.</p>
+                <a href="contact.php" className="text-blue-500 hover:text-blue-700">Apply Now <i className="fa fa-chevron-circle-right"></i></a>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+<section className="relative isolate overflow-hidden bg-white px-6 py-10 sm:py-32 lg:px-8">
+  <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
+  <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
+  <div className="mx-auto max-w-2xl lg:max-w-4xl">
+    <img
+      className="mx-auto h-12"
+      src="https://dbsrcollege.in/wp-content/uploads/2023/03/DBSRlogo_PJ.webp"
+      alt="no image"
+    />
+    <figure className="mt-10">
+      <blockquote className="text-center text-xl/8 font-semibold text-gray-900 sm:text-2xl/9">
+        <p>
+          “"As a pharmacy teacher at this college, I am impressed by the students' enthusiasm and dedication. The college provides a great learning environment, fostering both academic and personal growth for future pharmacists."”
         </p>
-      </div>
-      <div className="w-full lg:w-8/12 md:w-8/12 sm:w-8/12 xs:w-full">
-        <div className="bg-yellow-300 border-none py-2 px-4" id="bn2">
-          <div className="flex items-center" style={{ width: 10 }}>
-            <h2 className="hidden">Announcement</h2>
-            <span />
+      </blockquote>
+      <figcaption className="mt-10">
+        <img
+          className="mx-auto size-10 rounded-full"
+          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+          alt=""
+        />
+        <div className="mt-4 flex items-center justify-center space-x-3 text-base">
+          <div className="font-semibold text-gray-900">Dr. Shailendra kawre (Principal) 
           </div>
-          <ul className="pl-7">
-            <li className="hidden w-full">
-              <a href="#">
-                Admission related enquiries for MBA Batch commencing for the session 2024-25 are now invited.
-              </a>
-            </li>
-            <li className="w-full block">
-              <a href="MBA-Ist-Sem.pdf">MBA 1st sem exam papers.</a>
-            </li>
-          </ul>
-          <div className="flex">
-            <span />
-            <span />
-          </div>
+          <svg
+            viewBox="0 0 2 2"
+            width={3}
+            height={3}
+            aria-hidden="true"
+            className="fill-gray-900"
+          >
+            <circle cx={1} cy={1} r={1} />
+          </svg>
+          <div className="text-gray-600">(PhD pharmacology)</div>
         </div>
-      </div>
-      <div className="w-full sm:w-1/12 text-right">
-        <div className="flex justify-end space-x-3">
-          <a href="#">
-            <i className="fa fa-facebook" />
-          </a>
-          <a href="#">
-            <i className="fa fa-twitter" />
-          </a>
-          <a href="#">
-            <i className="fa fa-linkedin" />
-          </a>
-        </div>
-      </div>
-    </div>
+      </figcaption>
+    </figure>
   </div>
-</div>
+</section>
 
-<div className="pt-10 pb-10">
-  <div className="container mx-auto">
-    <div className="flex flex-wrap">
-      <div className="w-full md:w-1/2 flex items-stretch flex-col lg:flex-row">
-        <div className="flex justify-center lg:justify-start">
-          <a href="/">
-            <img src="https://dbsrcollege.in/wp-content/uploads/2023/03/DBSRlogo_PJ.webp" alt="Logo" className='w-44 h-44' />
-          </a>
-        </div>
-      </div>
-      <div className="w-full md:w-1/2">
-        <div className="text-right">
-          <ul>
-            <li className="flex items-center space-x-2">
-              <i className="fa fa-map-marker" />
-              <p>
-                Amla, Sarvar Road, Near Ratibad,
-                <span className="block">Bhopal. (M.P.)</span>
-              </p>
-            </li>
-            <li className="flex items-center space-x-2">
-              <i className="fa fa-phone" />
-              <p>
-                Admission cell
-                <span className="block">7771012716, 9300312145, 7771012718</span>
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div className="sticky top-0 z-50 bg-white shadow-md">
-  <nav className="navbar flex justify-between items-center py-4 px-6">
-    <div className="flex items-center">
-      <button
-        className="lg:hidden text-xl"
-        type="button"
-        id="menu_toggler"
-      >
-        <i className="fa fa-bars" />
-      </button>
-    </div>
-
-    
-  </nav>
-</div>
-
-  </header>{" "}
- 
-  <section className="bg-cover bg-center relative pt-16 pb-12 text-white" style={{ backgroundImage: 'url(https://www.mpcmbhopal.org/img/mba1.jpg)' }}>
-      <div className="container mx-auto">
-        <div className="flex justify-between items-center">
-          <h1 className="text-4xl font-bold">Course Details</h1>
-          <div className="text-lg">
-            <a href="/" className="text-white hover:text-gray-300">Home</a> / <span>Course Details</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section className="pt-8 pb-8">
-      <div className="flex flex-col sm:flex-row">
-        <div className="w-44 sm:w-1/4 mt-8 sm:mt-0 sm:mr-8">
-          <div className="mt-8">
-            <a href="#!">
-              <img src="https://www.mpcmbhopal.org/img/model1.jpg" alt="Course Image" className="w-full" />
-            </a>
-          </div>
-          <div className="mt-8">
-            <ul className="space-y-4">
-              <li><a href="course-details.php" className="text-blue-500 hover:bg-gray-600 hover:text-white">MBA</a></li>
-              <li><a href="course-hr-managment.php" className="text-blue-500 hover:text-blue-700">MBA HR Management</a></li>
-              <li><a href="course-mba-finance.php" className="text-blue-500 hover:text-blue-700">MBA Finance</a></li>
-              <li><a href="course-mba-retail.php" className="text-blue-500 hover:text-blue-700">MBA Retail Management</a></li>
-              <li><a href="course-banking-finance.php" className="text-blue-500 hover:text-blue-700">MBA Banking & Finance</a></li>
-              <li><a href="course-mba-marketing.php" className="text-blue-500 hover:text-blue-700">MBA Marketing</a></li>
-            </ul>
-          </div>
-         
-        </div>
-
-        <div className="w-full sm:w-3/4">
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-3xl font-semibold">Master of Business Administration [MBA]</h2>
-              <p className="mt-4 text-lg">
-                As an aspirant seeking an MBA, you require a challenging learning experience within a highly supportive environment capable of providing you with a business qualification recognized throughout the world. Our MBA program.
-              </p>
-            </div>
-
-            {/* Accordion 1 - About MBA */}
-            <div className="bg-gray-100 p-4 rounded-lg">
-              <div className="flex justify-between items-center cursor-pointer" onClick={() => setOpenAbout(!openAbout)}>
-                <p className="font-semibold text-lg">About MBA</p>
-                <i className={`fa ${openAbout ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-              </div>
-              {openAbout && (
-                <div className="mt-4">
-                  <strong>Course Description:</strong>
-                  <ul className="list-disc pl-6">
-                    <li>Our MBA program is a business-oriented skill nurturing and development program coupled with rigorous research-based teaching. MPCM offers a rich learning environment in a truly global standard. We employ the latest teaching technology and methods and have an elegant state-of-the-art campus.</li>
-                  </ul>
-                  <strong className="mt-4">Recognitions</strong>
-                  <ul className="list-disc pl-6">
-                    <li>The 2-Year, Full Time MBA is a Post Graduate Programme approved by All India Council for Technical Education (AICTE) New Delhi, and affiliated to Barkatullah University, Bhopal.</li>
-                    <li>MPCM Bhopal is among the top 100 Management Schools of India.</li>
-                  </ul>
-                  <p><strong>Location:</strong> Bhopal</p>
-                  <p><strong>Course Type:</strong> Full-Time</p>
-                  <a href="contact.php" className="text-blue-500 hover:text-blue-700">Apply Now <i className="fa fa-chevron-circle-right"></i></a>
-                </div>
-              )}
-            </div>
-
-            {/* Accordion 2 - How to Apply */}
-            <div className="bg-gray-100 p-4 rounded-lg">
-              <div className="flex justify-between items-center cursor-pointer" onClick={() => setOpenApply(!openApply)}>
-                <p className="font-semibold text-lg">How to Apply for MBA</p>
-                <i className={`fa ${openApply ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-              </div>
-              {openApply && (
-                <div className="mt-4">
-                  <strong>To Apply for MBA:</strong>
-                  <ul className="list-disc pl-6">
-                    <li>Candidate should have appeared for AICTE CMAT</li>
-                    <li>Students who are in the final year of their Bachelor’s Degree (10+2+3) or who have appeared in the final year examination from a recognised institution/university are eligible to appear CMAT test.</li>
-                    <li>Subsequently, counseling is conducted by the Directorate of Technical Education (DTE), Govt. of Madhya Pradesh. CMAT score is used for admissions in Management Programs of institutes approved by AICTE.</li>
-                    <li>CMAT is a National Level Entrance exam, conducted by AICTE. CMAT is held once a year (generally in January). AICTE announces the exam dates in prominent National newspapers and various websites. The examination is computer based.</li>
-                  </ul>
-                  <strong className="mt-4">Note</strong>
-                  <ul className="list-disc pl-6">
-                    <li>Those who have missed giving the exam can also be allowed to appear for counseling based on qualifying exam percentage as per DTE guidelines.</li>
-                  </ul>
-                  <a href="contact.php" className="text-blue-500 hover:text-blue-700">Apply Now <i className="fa fa-chevron-circle-right"></i></a>
-                </div>
-              )}
-            </div>
-
-            {/* Accordion 3 - Admission Process */}
-            <div className="bg-gray-100 p-4 rounded-lg">
-              <div className="flex justify-between items-center cursor-pointer" onClick={() => setOpenAdmission(!openAdmission)}>
-                <p className="font-semibold text-lg">Admission Process</p>
-                <i className={`fa ${openAdmission ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-              </div>
-              {openAdmission && (
-                <div className="mt-4">
-                  <strong>The admission process is as follows:</strong>
-                  <ul className="list-disc pl-6">
-                    <li>On the basis of CMAT, the Directorate of Technical Education of Madhya Pradesh (DTE), Govt. of MP conducts Admission Counseling.</li>
-                    <li>Subsequently counseling for those who have missed CMAT is held as per DTE, Govt. of M.P guidelines strictly based on merit as per graduation Percentage(qualifying exam).</li>
-                    <li>The Candidate List is sent to MPCM where the candidate has to confirm his candidature and deposit the requisite fee.</li>
-                  </ul>
-                  <a href="contact.php" className="text-blue-500 hover:text-blue-700">Apply Now <i className="fa fa-chevron-circle-right"></i></a>
-                </div>
-              )}
-            </div>
-
-            {/* Accordion 4 - Eligibility & Fees */}
-            <div className="bg-gray-100 p-4 rounded-lg">
-              <div className="flex justify-between items-center cursor-pointer" onClick={() => setOpenEligibility(!openEligibility)}>
-                <p className="font-semibold text-lg">Eligibility & Fees</p>
-                <i className={`fa ${openEligibility ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-              </div>
-              {openEligibility && (
-                <div className="mt-4">
-                  <strong>Eligibility Criteria:</strong>
-                  <ul className="list-disc pl-6">
-                    <li>Candidate should be a Citizen of India holding a Graduate Degree in any discipline with at least 50% aggregate marks from any recognised University.</li>
-                    <li>For Reserved Category Candidates, the minimum requirement is 45%.</li>
-                  </ul>
-                  <strong className="mt-4">Fees</strong>
-                  <p>The total course fees for the MBA program at MPCM are Rs. 1,50,000/- for the two-year course.</p>
-                  <a href="contact.php" className="text-blue-500 hover:text-blue-700">Apply Now <i className="fa fa-chevron-circle-right"></i></a>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-	  </section>
-
- 
-</div>
 
     </Layout>
 
