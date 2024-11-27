@@ -1,7 +1,7 @@
 {
   "name": "vite-project",
-  "private": true,
   "homepage": "https://githltech.github.io/DBSRCollege",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
