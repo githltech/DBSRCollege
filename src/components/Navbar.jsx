@@ -20,7 +20,7 @@ const Navbar = () => {
     { 
       name: "COURSES",
       subItems:[
-        { name: "D.Pharma" },
+        { name: "D.Pharma",href: "/dpharma" },
         { name: "B.Pharma" },
         { name: "B.SC" },
         { name: "M.SC" },

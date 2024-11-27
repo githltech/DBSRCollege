@@ -9,6 +9,7 @@ import Contactus from './pages/Contactus';
 import BookingPage from './pages/BookingPage';
 import WhyChooseUs from './pages/WhyChooseUs';
 import AboutUsPage from './pages/AboutUsPage';
+import Dpharma from './pages/courses/Dpharma';
 
 const  App = ()  =>{
 
@@ -23,6 +24,9 @@ const  App = ()  =>{
         <Route path="/booking" element = {<BookingPage/>}/>
         <Route path='/login' element = {<Login/>}/>
         <Route path='/whychooseus' element = {<WhyChooseUs/>}/>
+        <Route path='/dpharma' element = {<Dpharma/>} />
+
+
       </Routes>
     </Router>
     </>
