@@ -10,7 +10,7 @@ import { SiGooglemaps } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-gray-700 pt-8 pb-4">
+    <footer className="bg-[#2B334F] text-white pt-8 pb-4">
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 px-4">
         <div>
           <ul>
@@ -22,7 +22,7 @@ const Footer = () => {
               </a>
              </li>
 
-            <li className="flex items-center text-sm font-semibold hover:text-red-600 mt-2">
+            <li className="flex items-center text-sm font-semibold  mt-2">
             Dr bhagat Singh Rai institute of technology was established by @Abhishek Rai, Seoni.
              </li>
 
@@ -175,7 +175,7 @@ const Footer = () => {
           <h3 className="text-blue-600 mb-2">Contact Us</h3>
           <ul className="text-sm font-semibold">
             <li className="flex items-center gap-1">
-              <MdOutlineAddIcCall icon="phone" /> +44 (12) 123 4567 891</li>
+              <MdOutlineAddIcCall icon="phone" /> +91-9425175781</li>
             <li className="flex items-center gap-1">
               <MdOutlineEmail/>
               Dbsr college.
@@ -193,8 +193,8 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col md:flex-row justify-between space-y-1 items-center border-t border-gray-300 mt-8 pt-4 px-4 ">
-        <p className="text-sm font-semibold text-gray-600">&copy; 2044 Dbsr College Site All Rights Reserved</p>
-        <p className="text-sm font-semibold text-gray-600">Developed By <a href="https://hltechindia.com/" className="hover:text-red-600 underline">© 2024, HL Tech India Pvt. Ltd.</a></p>
+        <p className="text-sm font-semibold text-white">&copy; 2044 Dbsr College Site All Rights Reserved</p>
+        <p className="text-sm font-semibold text-white">Developed By <a href="https://hltechindia.com/" className="hover:text-red-600 underline">© 2024, HL Tech India Pvt. Ltd.</a></p>
         
         {/* "Top" link with Arrow Icon */}
         {/* <a href="#" className="text-blue-600 flex items-center space-x-1 hover:text-teal-800">

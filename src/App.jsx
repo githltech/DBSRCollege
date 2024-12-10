@@ -10,6 +10,11 @@ import BookingPage from './pages/BookingPage';
 import WhyChooseUs from './pages/WhyChooseUs';
 import AboutUsPage from './pages/AboutUsPage';
 import Dpharma from './pages/courses/Dpharma';
+import Bpharma from './pages/courses/Bpharma';
+import TrnAndPlc from './pages/Placement/TrnAndPlc';
+import OurTeam from './pages/courses/OurTeam';
+
+
 
 const  App = ()  =>{
 
@@ -25,6 +30,9 @@ const  App = ()  =>{
         <Route path='/login' element = {<Login/>}/>
         <Route path='/whychooseus' element = {<WhyChooseUs/>}/>
         <Route path='/dpharma' element = {<Dpharma/>} />
+        <Route path='/bpharma' element = {<Bpharma/>}/>
+        <Route path= '/trnandplc' element = {<TrnAndPlc/> }/>
+        <Route path='/ourteam' element = {<OurTeam/> } />
 
 
       </Routes>

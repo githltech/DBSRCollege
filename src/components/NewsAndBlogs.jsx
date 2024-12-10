@@ -59,34 +59,44 @@ const NewsAndBlogs = () => {
   ];
 
   return (
-   <>
-   <div className="py-10 px-4 bg-gray-100">
-   <h2 className="bg-[#2B334F] inline-block mb-4 text-white px-4 py-2 font-semibold sm:text-sm text-xs">DBSR Blogs</h2>
-   <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {blogs.map((blog) => (
-        <div key={blog.id} className="bg-white shadow-md overflow-hidden border-2 border-l-0 border-r-0 border-t-0 border-b-red-600">
-          <div className="relative">
-            <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover" />
-            <span className="absolute bottom-[-10px] left-2 bg-red-600 text-white text-xs font-bold px-4 py-1">
-              {blog.category}
-            </span>
-          </div>
-          <div className="p-4">
-            <h3 className="mt-4 text-lg font-semibold">{blog.title}</h3>
-            <div className="mt-2 text-gray-500 text-sm flex items-center">
-              <span className="mr-2">👤 {blog.author}</span>
-              <span>📅 {blog.date}</span>
+    <>
+      <div className="py-10 px-4 bg-gray-100 lg:px-24">
+        <h2 className="bg-[#2B334F] inline-block mb-4 text-white px-4 py-2 font-semibold sm:text-sm text-xs">DBSR Blogs</h2>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {blogs.map((blog) => (
+            <div
+              key={blog.id}
+              className="bg-white shadow-md overflow-hidden border-2 border-l-0 border-r-0 border-t-0 border-b-red-600 rounded-lg" // Previous version
+            >
+              <div className="relative">
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  className="w-full h-48 object-cover rounded-t-lg"
+                />
+                <span className="absolute bottom-[-10px] left-2 bg-red-600 text-white text-xs font-bold px-4 py-1">
+                  {blog.category}
+                </span>
+              </div>
+              <div className="p-4">
+                <h3 className="mt-4 text-lg font-semibold">{blog.title}</h3>
+                <div className="mt-2 text-gray-500 text-sm flex items-center">
+                  <span className="mr-2">👤 {blog.author}</span>
+                  <span>📅 {blog.date}</span>
+                </div>
+                <p className="mt-3 text-gray-600 text-xs">{blog.summary}</p>
+                <a
+                  href="#"
+                  className="mt-4 inline-block text-red-700 text-xs font-semibold hover:underline"
+                >
+                  READ MORE →
+                </a>
+              </div>
             </div>
-            <p className="mt-3 text-gray-600 text-xs">{blog.summary}</p>
-            <a href="#" className="mt-4 inline-block text-red-700 text-xs font-semibold hover:underline">
-              READ MORE →
-            </a>
-          </div>
+          ))}
         </div>
-      ))}
-    </div>
-   </div>
-   </>
+      </div>
+    </>
   );
 };
 

@@ -38,14 +38,14 @@ const WhyDbsr = () => {
     <section className="relative text-white py-16 overflow-hidden">
       {/* Background Image with Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center "
         style={{
           backgroundImage: "linear-gradient(rgba(23, 37, 84, 0.9), rgba(23, 37, 84, 0.9)) ,url('https://dbsrcollege.in/wp-content/uploads/2023/06/headerImgae.jpg')",
           
         }}
         
       >
-       <div className="text-center my-6">
+       <div className="text-center my-6" >
             <h2 className="text-4xl font-bold">WHY DBSR?</h2>
             <p className="text-gray-300 mt-2">Synonymous With Excellence in Higher Education</p>
             <div className="h-1 w-20 bg-orange-500 mx-auto mt-2"></div>

@@ -84,7 +84,7 @@ const facultyDetails = () => {
   }, []);
 
   return (
-    <section className="py-10 bg-gray-200">
+    <section className="py-10 bg-gray-200 lg:px-24">
       <div className="text-center">
         <h2 className="text-orange-600 font-semibold px-4">
           YOUR COLLEGE JOURNEY, OUR COMMITMENT: GET TO KNOW THE TEAM SHAPING YOUR FUTURE

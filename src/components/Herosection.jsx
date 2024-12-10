@@ -1,88 +1,118 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Autoplay, Pagination } from "swiper/modules";
+import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
-// Image URLs for the slider
-const bannerImages = [
-  {
-    url: "https://dbsrcollege.in/wp-content/uploads/2023/06/headerImgae.jpg",
-    title: `Welcome To DBSR University`,
-    description: "Empowering the leaders of tomorrow with world-class education.",
-  },
+const HeroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  {
-    url: "https://plus.unsplash.com/premium_photo-1697729447666-c39f50d595ea?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW5kaWFuJTIwY29sbGVnZXxlbnwwfHwwfHx8MA%3D%3D",
-    title: "Welcome to DBSR",
-    description: "Empowering the leaders of tomorrow with world-class education.",
-  },
-  
-  {
-    url: "https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?cs=srgb&dl=pexels-pixabay-256490.jpg&fm=jpg",
-    title: "Vibrant Campus Life",
-    description: "Experience a campus life that blends learning with fun.",
-  },
-  {
-    url: "https://collegeinfogeek.com/wp-content/uploads/2016/08/first-year-of-college-myths-featured.jpg",
-    title: "State-of-the-Art Facilities",
-    description: "Our facilities provide a perfect environment for learning and growth.",
-  },
-];
+  const slides = [
+    {
+      id: 1,
+      image:
+        "https://media1.thrillophilia.com/filestore/0hdjtmduamliielzcvdsepune779_dubai%20skyline.jpg?w=340&dpr=2",
+    },
+    {
+      id: 2,
+      image:
+        "https://media1.thrillophilia.com/filestore/c4ptxkldlkubiw14mh90eb2dspl5_shutterstock_1071877145.jpg?w=340&dpr=2",
+    },
+    {
+      id: 3,
+      image:
+        "https://media1.thrillophilia.com/filestore/4cgc0ibn1rqwvli84izupxwe45nv_shutterstock_2384596901%20(1).jpg?w=360&dpr=2",
+    },
+  ];
 
-const Herosection = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    pauseOnHover: false,
+  };
+
   return (
-    <section className="">
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination]}
-        className="h-full"
-      >
-        {bannerImages.map((banner, index) => (
-          <SwiperSlide key={index}>
-           
-         {/* Herosection banner */}
-       <div className="relative bg-cover bg-center h-64 sm:h-80 lg:h-screen" style={{ backgroundImage: `url(${banner.url})` }}>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-60 flex flex-col justify-center items-center text-center">
-          <span className="text-sm uppercase text-red-500 bg-white border-gray-200 p-1 font-semibold tracking-widest mb-2">About University</span>
-          <h1 className=" text-2xl sm:text-4xl text-white font-semibold">{banner.title}</h1>
-          <p className="text-white mt-2 max-w-xl mx-auto text-xs sm:text-xl">
-           {banner.description}
-          </p> 
-          
-         <div className="flex gap-4 mt-4">
-         <div class="relative inline-block">
-         <a href="/" class="relative bg-red-700 text-white px-4 py-2 font-semibold focus:outline-none overflow-hidden group">
-         <span class="absolute inset-0 bg-black transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
-         <span class="absolute inset-0 bg-black transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
-         <span class="relative z-10">Apply Now &rarr;</span>
-        </a>
+    <div>
+      {/* Static Left Side Content */}
+      <div className="absolute inset-0 flex flex-col sm:flex-row items-center justify-between px-8 z-10">
+        {/* Left Side */}
+        <div className="text-left w-full sm:w-1/2 flex flex-col justify-center space-y-4 pl-12">
+          <hr className="border-t-2 border-orange-500 w-32" />
+          <p className="text-white text-2xl">Welcome to DBSR University</p>
+          <h1 className="text-6xl sm:text-7xl md:text-8xl text-white font-bold leading-snug">
+            ABOUT <br /> UNIVERSITY
+          </h1>
+          <p className="text-white text-lg sm:text-xl font-semibold">
+            Empowering the leaders of tomorrow with world-class education.
+          </p>
+          <a
+            href="/"
+            className="w-40 bg-red-700 text-white px-3 py-2 rounded-md text-lg font-semibold hover:bg-black transition duration-300"
+          >
+           Get Started&rarr;
+          </a>
         </div>
 
-<div class="relative inline-block">
-  <a href="/" class="relative bg-black text-white px-4 py-2 font-semibold focus:outline-none overflow-hidden group">
-    <span class="absolute inset-0 bg-red-700 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
-    <span class="absolute inset-0 bg-red-700 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
-    <span class="relative z-10">Application form &rarr;</span>
-  </a>
-</div>
-
-         </div>
+        {/* Form Section */}
+        <div className="w-full sm:w-1/3 bg-[#2B334F] p-8 rounded-lg shadow-lg">
+          <h2 className="text-2xl font-bold text-red-700 mb-6 text-center">
+            Application Form
+          </h2>
+          <form className="space-y-4">
+            <input
+              type="text"
+              placeholder="Name"
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-700 focus:outline-none bg-white text-black"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-700 focus:outline-none bg-white text-black"
+            />
+            <input
+              type="tel"
+              placeholder="Mobile No"
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-700 focus:outline-none bg-white text-black"
+            />
+            <select
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-700 focus:outline-none bg-white text-black"
+            >
+              <option value="">Select Branch</option>
+              <option value="engineering">Engineering</option>
+              <option value="pharmacy">Pharmacy</option>
+            </select>
+            <button
+              type="submit"
+              className="w-full bg-red-700 text-white px-4 py-3 rounded-md font-bold hover:bg-black transition duration-300"
+            >
+              Apply Now &rarr;
+            </button>
+          </form>
         </div>
       </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </section>
+
+      {/* Image Slider */}
+      <div>
+        <Slider {...settings}>
+          {slides.map((slide) => (
+            <div key={slide.id} className="relative">
+              <img
+                src={slide.image}
+                alt={`Slide ${slide.id}`}
+                className="w-full h-[75vh] sm:max-h-fit lg:min-h-screen object-cover"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </div>
   );
 };
 
-export default Herosection;
+export default HeroSection;

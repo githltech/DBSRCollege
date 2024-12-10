@@ -3,7 +3,7 @@ import React from 'react';
 
 const BlogPost = ({ title, image, description, date }) => {
   return (
-    <div className="relative overflow-hidden rounded-lg shadow-lg group transition-all duration-300 transform hover:scale-105">
+    <div className="relative overflow-hidden rounded-lg shadow-lg group transition-all duration-300 transform hover:scale-105 ">
       <img
         src={image}
         alt={title}

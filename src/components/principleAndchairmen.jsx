@@ -22,8 +22,8 @@ const leadershipProfiles = [
 
 const PrincipleAndchairmen = () => {
   return (
-    <section className=" py-10 bg-[#2B334F]" id="leadership">
-      <div className=" px-6 text-center">
+    <section className=" sm:px-0 py-10 bg-[#2B334F] lg:px-24 " id="leadership" >
+      <div className=" px-6 text-center sm:px-0">
         <h2 className="text-3xl font-bold text-white">Our Leadership</h2>
         <p className="text-white text-sm mt-2">
           Meet the leaders driving our institution’s vision and growth.

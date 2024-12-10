@@ -19,7 +19,7 @@ const galleryItems = [
 
 const Gallery = () => {
   return (
-    <div className="bg-[#2B334F] text-white py-10">
+    <div className="bg-[#2B334F] text-white py-10 lg:px-24">
       <div className="text-center mb-8">
       <h2 className="text-3xl font-semibold text-center mb-8">DBSR Gallary</h2>
       </div>

@@ -27,7 +27,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="py-10 bg-gray-100">
+    <section className="py-10 bg-gray-100 lg:px-24">
       <div className="px-4 grid md:grid-cols-2 gap-10">
         {/* Left section with title and description */}
         <div>

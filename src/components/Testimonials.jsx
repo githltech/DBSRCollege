@@ -2,9 +2,9 @@ import React from 'react';
 
 const Testimonials = () => {
   return (
-    <div className="testimonials py-10 bg-gray-10 mt-32">
+    <div className="testimonials py-10 bg-gray-10 mt-32 lg:px-24">
       <h2 className="text-3xl font-semibold text-center mb-8">What Our Students Say</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 ">
         {/* Testimonial 1 */}
         <div className="bg-white p-6 rounded-md shadow-lg shadow-pink-100 w-full border border-gray-400">
           <img src="https://images.unsplash.com/photo-1604177091072-b7b677a077f6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWFuJTIwc3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D" alt="Student 1" className="w-20 h-20 rounded-full mx-auto mb-4" />
