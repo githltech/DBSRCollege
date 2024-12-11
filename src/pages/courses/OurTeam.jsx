@@ -1,77 +1,104 @@
 import React, { useState } from "react";
 import Layout from "../../components/Layout";
 
+// Importing Images
+import AdilImage from "../../images/Adil.jpg";
+import AliyaHumaAnsariImage from "../../images/AliyaHumaAnsari.jpg";
+import AnanyaBisenImage from "../../images/AnanyaBisen.jpg";
+import SandeepBindraImage from "../../images/Sandeepbindra.jpg";
+import SayaliRathodImage from "../../images/Sayalirathod.jpg";
+import ShailBalaKindarleImage from "../../images/shailbalakindarle.jpg";
+import ShailendraKawreImage from "../../images/Shailendrakawre.jpg";
+import ShikhaSingAndupeImage from "../../images/shikhasingandupe.jpg";
+
 function OurTeam() {
   const [openAbout, setOpenAbout] = useState(false);
   const [openApply, setOpenApply] = useState(false);
   const [openAdmission, setOpenAdmission] = useState(false);
   const [openEligibility, setOpenEligibility] = useState(false);
 
+  const handleLogin = () => {
+    // Functionality for login (applied to Apply Now button)
+    console.log("Login functionality triggered");
+  };
+
   const blogs = [
     {
       id: 1,
       category: 'PROFESSOR',
-      professorName: 'Dr. John Doe',
+      professorName: 'Dr. Adil',
       designation: 'Professor of Mathematics',
       subject: 'Advanced Calculus',
-      image: 'https://tebewebe.online/edupreme/wp-content/uploads/sites/63/2023/11/row-of-multicultural-teenage-students-of-university-sitting-by-desk-at-lecture.jpg',
+      image: AdilImage,
     },
     {
       id: 2,
       category: 'PROFESSOR',
-      professorName: 'Dr. Jane Smith',
+      professorName: 'Dr. Aliya Huma Ansari',
       designation: 'Associate Professor of Physics',
       subject: 'Quantum Mechanics',
-      image: 'https://tebewebe.online/edupreme/wp-content/uploads/sites/63/2023/11/maths-teacher-teaching-students-at-school.jpg',
+      image: AliyaHumaAnsariImage,
     },
     {
       id: 3,
       category: 'PROFESSOR',
-      professorName: 'Dr. Albert Green',
+      professorName: 'Dr. Ananya Bisen',
       designation: 'Assistant Professor of Computer Science',
       subject: 'Data Structures & Algorithms',
-      image: 'https://tebewebe.online/edupreme/wp-content/uploads/sites/63/2023/11/a-young-asian-high-school-student-studies-using-a-laptop-computer-a-group-of-classmates-in-class-.jpg',
+      image: AnanyaBisenImage,
     },
     {
       id: 4,
       category: 'PROFESSOR',
-      professorName: 'Dr. Emily White',
+      professorName: 'Dr. Sandeep Bindra',
       designation: 'Professor of Chemistry',
       subject: 'Organic Chemistry',
-      image: 'https://tebewebe.online/edupreme/wp-content/uploads/sites/63/2023/11/university-students-using-laptops-and-digital-tablet-working-together.jpg',
+      image: SandeepBindraImage,
     },
     {
       id: 5,
       category: 'PROFESSOR',
-      professorName: 'Dr. Robert Black',
+      professorName: 'Dr. Sayali Rathod',
       designation: 'Associate Professor of History',
       subject: 'Modern History',
-      image: 'https://tebewebe.online/edupreme/wp-content/uploads/sites/63/2023/11/group-of-happy-international-students-posing-outdoors-near-university-building.jpg',
+      image: SayaliRathodImage,
     },
     {
       id: 6,
       category: 'PROFESSOR',
-      professorName: 'Dr. Maria Grey',
+      professorName: 'Dr. Shail Bala Kindarle',
       designation: 'Professor of Biology',
       subject: 'Cell Biology',
-      image: 'https://tebewebe.online/edupreme/wp-content/uploads/sites/63/2023/11/happy-students-studying-on-break-using-laptop-on-campus-lawn-with-university-building-on-background.jpg',
+      image: ShailBalaKindarleImage,
+    },
+    {
+      id: 7,
+      category: 'PROFESSOR',
+      professorName: 'Dr. Shailendra Kawre',
+      designation: 'Professor of Mechanical Engineering',
+      subject: 'Thermodynamics',
+      image: ShailendraKawreImage,
+    },
+    {
+      id: 8,
+      category: 'PROFESSOR',
+      professorName: 'Dr. Shikha Sing Andupe',
+      designation: 'Professor of English',
+      subject: 'World Literature',
+      image: ShikhaSingAndupeImage,
     },
   ];
 
   return (
     <Layout>
       <main
-        className="relative grid place-items-center bg-cover bg-center h-[250px]" // Height remains 250px
+        className="relative grid place-items-center bg-cover bg-center h-[250px]"
         style={{
           backgroundImage: 'url("https://img.freepik.com/premium-photo/large-brick-building-with-tower-that-says-university-america_551880-7776.jpg?ga=GA1.1.1589028456.1727074417&semt=ais_hybrid")',
         }}
       >
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-        {/* Content Container */}
         <div className="relative z-10 flex justify-center items-center w-full px-6">
-          {/* Logo Section on the Left */}
           <div className="absolute left-6">
             <a href="/" className="block">
               <img
@@ -81,37 +108,27 @@ function OurTeam() {
               />
             </a>
           </div>
-
-          {/* Text Content Centered */}
           <div className="text-center text-white">
-            {/* Main Heading */}
             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
               About Our Team
             </h1>
-
-            {/* Subheading */}
             <p className="mt-4 text-lg sm:text-xl font-medium leading-snug">
               "DBSR College team is dedicated, passionate, and committed to providing quality education and excellence."
             </p>
-
-            {/* B Pharma Heading */}
             <h2 className="mt-6 text-xl sm:text-2xl font-semibold text-yellow-400">
               Connect with Team DBSR
             </h2>
           </div>
         </div>
-
-        {/* Call-to-Action Button */}
         <div className="absolute bottom-4 right-4 z-10">
-          <a
-            href="/apply"
+          <button
+            onClick={handleLogin}
             className="px-4 py-2 bg-blue-500 text-white text-sm sm:text-base font-semibold rounded hover:bg-blue-600 shadow-lg"
           >
             Apply Now
-          </a>
+          </button>
         </div>
       </main>
-
       <div className="py-10 px-4 bg-gray-100 lg:px-24">
         <h2 className="bg-[#2B334F] inline-block mb-4 text-white px-4 py-2 font-semibold sm:text-sm text-xs">
           DBSR Professors
@@ -126,7 +143,7 @@ function OurTeam() {
                 <img
                   src={blog.image}
                   alt={blog.professorName}
-                  className="w-full h-48 object-cover rounded-t-lg"
+                  className="w-full h-[200px] object-contain rounded-t-lg"
                 />
                 <span className="absolute bottom-[-10px] left-2 bg-red-600 text-white text-xs font-bold px-4 py-1">
                   {blog.category}

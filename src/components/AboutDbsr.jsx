@@ -3,7 +3,7 @@ import React from 'react';
 function AboutDbsr() {
   return (
     <>
-<section class="grid grid-cols-1  lg:grid-cols-2 py-20 px-24 bg-[#2B334F]">
+<section class="grid grid-cols-1  lg:grid-cols-2 py-20  lg:px-32 px-10 bg-[#2B334F]">
   <div class="relative">
     <div class="absolute px-5 top-[-30px] left-[-30px] w-full h-full border-[13px] border-red-600"></div>
     <img

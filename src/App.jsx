@@ -1,3 +1,4 @@
+// import React,{useEffect} from 'react';
 import React from 'react';
 import './App.css';
 import './index.css';
@@ -17,6 +18,18 @@ import OurTeam from './pages/courses/OurTeam';
 
 
 const  App = ()  =>{
+
+  // useEffect(() => {
+  //   const handleContextMenu = (event) => {
+  //     event.preventDefault();
+  //   };
+  //   document.addEventListener("contextmenu", handleContextMenu);
+  //   return () => {
+  //     document.removeEventListener("contextmenu", handleContextMenu);
+  //   };
+    
+  // }, []);
+  
 
   return (
     <>

@@ -194,7 +194,7 @@ const Footer = () => {
 
       <div className="flex flex-col md:flex-row justify-between space-y-1 items-center border-t border-gray-300 mt-8 pt-4 px-4 ">
         <p className="text-sm font-semibold text-white">&copy; 2044 Dbsr College Site All Rights Reserved</p>
-        <p className="text-sm font-semibold text-white">Developed By <a href="https://hltechindia.com/" className="hover:text-red-600 underline">© 2024, HL Tech India Pvt. Ltd.</a></p>
+        <p className="text-sm font-semibold text-white">Developed & Managed By <a href="https://hltechindia.com/" className="hover:text-red-600 underline"> HL Tech India Private Limited.</a></p>
         
         {/* "Top" link with Arrow Icon */}
         {/* <a href="#" className="text-blue-600 flex items-center space-x-1 hover:text-teal-800">
