@@ -20,15 +20,28 @@ const Navbar = () => {
   }, []);
 
   const menuItems = [
-    { name: "ABOUT", subItems: [{ name: "About Dbsr", href: "/aboutus" },  { name: "Our Mission" }] },
-    { name: "COURSES", subItems: [{ name: "D.Pharma", href: "/dpharma" }, { name: "B.Pharma", href: "/bpharma" }, { name: "B.SC" }, { name: "M.SC" }, { name: "MBA" }, { name: "BBA" }, { name: "BCA" }, { name: "MCA" }, { name: "B.Tech" }, { name: "M.Tech" }] },
+    { name: "ABOUT", subItems: [{ name: "About Dbsr", href: "/aboutus" }, { name: "Our Mission" }] },
+    {
+      name: "COURSES",
+      subItems: [
+        { name: "D.Pharma", href: "/dpharma" },
+        { name: "B.Pharma", href: "/bpharma" },
+        { name: "B.SC" },
+        { name: "M.SC" },
+        { name: "MBA" },
+        { name: "BBA" },
+        { name: "BCA" },
+        { name: "MCA" },
+        { name: "B.Tech" },
+        { name: "M.Tech" },
+      ],
+    },
     { name: "DEPARTMENT", subItems: [{ name: "Computer Science", href: "/departments/computer-science" }, { name: "Electronics", href: "/departments/electronics" }, { name: "Mechanical Engineering", href: "/departments/mechanical" }] },
     { name: "ADMISSION", subItems: [{ name: "Diploma", href: "/admission/diploma" }, { name: "Undergraduate", href: "/admission/undergraduate" }] },
     { name: "PLACEMENT", subItems: [{ name: "Placement Cell", href: "/TrnAndPlc" }, { name: "Training and Placement", href: "/TrnAndPlc" }, { name: "Placement Statistics", href: "/placement/statistics" }] },
     { name: "FACULTY", subItems: [{ name: "Our Faculties", href: "/OurTeam" }, { name: "Faculty of Pharmaceutical science", href: "/faculty/science" }] },
     { name: "ALUMNI", subItems: [{ name: "Alumni Association", href: "/alumni/association" }, { name: "Alumni Network", href: "/alumni/network" }] },
     { name: "CONTACT", subItems: [{ name: "Contact Us", href: "/contactus" }, { name: "Contact Information", href: "/" }] },
-    // Login menu is removed from large screens.
     { name: "LOGIN", subItems: [{ name: "Student Login", href: "/" }, { name: "Teacher Login", href: "/" }] },
   ];
 
@@ -56,13 +69,14 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <div className="hidden lg:flex items-center justify-center space-x-6 flex-grow">
+        {/* Wrapper for menu items with margin adjustments */}
+        <div className="hidden lg:flex items-center justify-center mx-10 space-x-6 flex-grow">
           {menuItems
             .filter((item) => item.name !== "LOGIN") // Remove LOGIN menu for large screens
             .map((item, index) => (
               <div key={index} className="group relative">
                 <button
-                  className={`flex items-center ${
+                  className={`flex items-center text-sm ${
                     isScrolled ? "text-black" : "text-white"
                   }`}
                 >

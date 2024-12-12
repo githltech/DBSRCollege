@@ -60,8 +60,8 @@ const Footer = () => {
             </li>
             <li className="flex items-center text-sm font-semibold hover:text-red-600">
               <IoMdArrowDropright />
-              <a href="/" className="hover:border-b-[1.2px] border-gray-600">
-                Our Help Desk
+              <a href="/gallery" className="hover:border-b-[1.2px] border-gray-600">
+                Gallary
               </a>
             </li>
           </ul>
@@ -134,12 +134,7 @@ const Footer = () => {
                 Undergraduate
               </a>
             </li>
-            <li className="flex items-center text-sm font-semibold hover:text-red-600">
-              <IoMdArrowDropright />
-              <a href="/" className="hover:border-b-[1.2px] border-gray-600">
-                School
-              </a>
-            </li>
+           
           </ul>
         </div>
         <div>

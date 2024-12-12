@@ -1,70 +1,68 @@
-import React, { useRef ,useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+// Importing Images
+import AdilImage from "../images/Adil.jpg";
+import AliyaHumaAnsariImage from "../images/AliyaHumaAnsari.jpg";
+import AnanyaBisenImage from "../images/AnanyaBisen.jpg";
+import SandeepBindraImage from "../images/SandeepBindra.jpg";
+import SayaliRathodImage from "../images/SayaliRathod.jpg";
+import ShailBalaKindarleImage from "../images/ShailBalaKindarle.jpg";
+import ShailendraKawreImage from "../images/ShailendraKawre.jpg";
+import ShikhaSingAndupeImage from "../images/ShikhaSingAndupe.jpg";
+
 
 const teamMembers = [
   {
-    name: "Dr. Kavita Burse",
-    title: "Director - Corporate Relations",
-    qualifications: "B.Tech from SGSITS, M.Tech, Ph.D from NIT, Bhopal",
-    image: "https://technocratsgroup.edu.in/wp-content/themes/technocratsgroup/assets/images/our-team/alka-awasthi.webp",
+    name: "Dr. Adil",
+    title: "Professor of Mathematics",
+    qualifications: "Advanced Calculus",
+    image :AdilImage,
   },
   {
-    name: "Prof. Nishchal Kaushal",
-    title: "Addl. Director - Corporate Relations",
-    qualifications: "B.Tech-NIT, M.Tech-NIT Bhopal | Ex: Daewoo, Ex-Honda",
-    image: "https://technocratsgroup.edu.in/wp-content/themes/technocratsgroup/assets/images/our-team/arun-pandey.webp",
+    name: "Dr. Aliya Huma Ansari",
+    title: "Associate Professor of Physics",
+    qualifications: "Quantum Mechanics",
+    image: AliyaHumaAnsariImage,
   },
   {
-    name: "Dr. Shashi Kumar Jain",
-    title: "Director",
-    qualifications: "M.Tech, Ph.D in Mechanical Engineering",
-    image: "https://technocratsgroup.edu.in/wp-content/themes/technocratsgroup/assets/images/our-team/surabhi-mam.webp",
+    name: "Dr. Ananya Bisen",
+    title: "Assistant Professor of Computer Science",
+    qualifications: "Data Structures & Algorithms",
+    image: AnanyaBisenImage,
   },
   {
-    name: "Dr. Anurag Choubey",
-    title: "Director",
-    qualifications: "B.Tech from DBSR, M.Tech, Ph.D from SIRT, Bhopal.",
-    image: "https://technocratsgroup.edu.in/wp-content/themes/technocratsgroup/assets/images/our-team/saurabh-sir.webp",
+    name: "Dr. Sandeep Bindra",
+    title: "Professor of Chemistry",
+    qualifications: "Organic Chemistry",
+    image: SandeepBindraImage,
   },
   {
-    name: "Dr. Sanjay Sharma",
-    title: "Director",
-    qualifications: "B.Tech from DBSR, M.Tech, Ph.D from SAGE, Bhopal",
-    image: "https://technocratsgroup.edu.in/wp-content/themes/technocratsgroup/assets/images/our-team/anurag-choubey.webp",
+    name: "Dr. Sayali Rathod",
+    title: "Associate Professor of History",
+    qualifications: "Modern History",
+    image: SayaliRathodImage,
   },
   {
-    name: "Dr. Kavita Burse",
-    title: "Director Corporate Relations",
-    qualifications: "B.E., M.Tech., Ph.D.",
-    image: "https://technocratsgroup.edu.in/wp-content/themes/technocratsgroup/assets/images/our-team/kavita-burse.webp",
+    name: "Dr. Shail Bala Kindarle",
+    title: "Professor of Biology",
+    qualifications: "Cell Biology",
+    image: ShailBalaKindarleImage,
   },
   {
-    name: "Dr. Shashi Kumar",
-    title: "Director Dbsr",
-    qualifications: "B.E., M.Tech., Ph.D.",
-    image: "https://technocratsgroup.edu.in/wp-content/themes/technocratsgroup/assets/images/our-team/shashi-kumar-jain.webp",
+    name: "Dr. Shailendra Kawre",
+    title: "Professor of Mechanical Engineering",
+    qualifications: "Thermodynamics",
+    image: ShailendraKawreImage,
   },
   {
-    name: "Dr. Viksas Gupta",
-    title: "Director Dbsr",
-    qualifications: "B.E., M.Tech., Ph.D.",
-    image: "https://technocratsgroup.edu.in/wp-content/themes/technocratsgroup/assets/images/our-team/vikas-gupta.webp",
-  },
-  {
-    name: "Dr. Sanjeev Sharma",
-    title: "Director Dbsr",
-    qualifications: "B.E., M.Tech., Ph.D.",
-    image: "https://technocratsgroup.edu.in/wp-content/themes/technocratsgroup/assets/images/our-team/sanjeev-sharma.webp",
-  },
-  {
-    name: "Dr. Shashi Kumar",
-    title: "Director Dbsr",
-    qualifications: "B.E., M.Tech., Ph.D.",
-    image: "https://technocratsgroup.edu.in/wp-content/themes/technocratsgroup/assets/images/our-team/shashi-kumar-jain.webp",
+    name: "Dr. Shikha Sing Andupe",
+    title: "Professor of English",
+    qualifications: "World Literature",
+    image: ShikhaSingAndupeImage,
   },
 ];
 
-const facultyDetails = () => {
+const FacultyDetails = () => {
   const scrollRef = useRef(null);
 
   const scrollLeft = () => {
@@ -133,8 +131,7 @@ const facultyDetails = () => {
         </div>
       </div>
     </section>
-   
   );
 };
 
-export default facultyDetails;
+export default FacultyDetails;

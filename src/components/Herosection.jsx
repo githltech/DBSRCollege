@@ -60,7 +60,7 @@ const HeroSection = () => {
         </div>
 
         {/* Form Section */}
-        <div className="hidden lg:block  w-full sm:w-1/3 bg-transparent -opacity--20 p-8 rounded-lg shadow-lg border-4 border-[#2B334F]">
+        <div className="hidden lg:block  w-full sm:w-1/3 bg-transparent -opacity--20 p-8 rounded-lg shadow-lg border-2 border-[#2B334F]">
           <h2 className="text-2xl font-bold text-[#2B334F] mb-6 text-center">
             Application Form
           </h2>

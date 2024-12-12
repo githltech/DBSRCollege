@@ -22,7 +22,8 @@ const Contactus = () => {
             items-center gap-4">
               <IoMdCall className=" mb-4 text-orange-500 bg-orange-100 rounded-full w-14 h-14 p-2" />
               <div className="">
-              <p className="font-bold text-xl">888 269 6248</p>
+              <p className="font-bold text-xl">942 517 5781
+              </p>
               <p className="text-xs ">Mon-Fri, 9am-5pm AEST</p>
               </div>
             </div>
@@ -104,13 +105,10 @@ const Contactus = () => {
             {[
               {image:'https://test-files.vroomvroomvroom.com/cms/assets/images/global-contactus-phone-usflag--small.png', country: 'USA', number: '888 269 6248' },
 
-              {image:'https://test-files.vroomvroomvroom.com/cms/assets/images/global-contactus-phone-interflag--small.png', country: 'International', number: '(+61) 7 3062 6879' },
-              {image:'https://test-files.vroomvroomvroom.com/cms/assets/images/global-contactus-phone-auflag--small.png', country: 'Australia', number: '(+61) 1300 722 920' },
-
+              
               {image:'https://test-files.vroomvroomvroom.com/cms/assets/images/global-contactus-phone-caflag--small.png', country: 'Canada', number: '888 299 6248' },
               {image:'https://test-files.vroomvroomvroom.com/cms/assets/images/global-contactus-phone-nzflag--small.png', country: 'New Zealand', number: '(+64) 0800 141 466' },
 
-              {image:'https://test-files.vroomvroomvroom.com/cms/assets/images/global-contactus-phone-ukflag--small.png', country: 'United Kingdom', number: '(+44) 0808 164 1480' }
             ].map((contact, index) => (
               <div key={index} className="bg-blue-50 p-4 border rounded-md flex items-center gap-4">
                 <div className="rounded-full bg-white p-4">
@@ -134,8 +132,8 @@ const Contactus = () => {
             🏢 Head office
           </h3>
           <p className="text-gray-700 mb-4">
-            349 Coronation Dr, Milton, QLD 4064, Australia. <br />
-            Postal address: PO Box 1424, Milton, QLD 4064, Australia.
+          Palari Mandla road tahsil seoni 
+          district seoni Madhya Pradesh 480661
           </p>
           <p className="text-sm text-gray-500 italic">
             *No cars are available for pick up from this office. Please make your car rental booking online or contact us for assistance.

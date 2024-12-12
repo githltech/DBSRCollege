@@ -14,6 +14,9 @@ import Dpharma from './pages/courses/Dpharma';
 import Bpharma from './pages/courses/Bpharma';
 import TrnAndPlc from './pages/Placement/TrnAndPlc';
 import OurTeam from './pages/courses/OurTeam';
+import FacultyDetails from "./components/FacultyDetails";
+import Gallery from "./components/Gallary";
+
 
 
 
@@ -46,6 +49,8 @@ const  App = ()  =>{
         <Route path='/bpharma' element = {<Bpharma/>}/>
         <Route path= '/trnandplc' element = {<TrnAndPlc/> }/>
         <Route path='/ourteam' element = {<OurTeam/> } />
+        <Route path="/faculty" element={<FacultyDetails />} />
+        <Route path="/gallery" element={<Gallery />} />
 
 
       </Routes>
