@@ -40,7 +40,7 @@ const HeroSection = () => {
   return (
     <div>
       {/* Static Left Side Content */}
-      <div className="absolute inset-0 flex  lg:flex-row items-center lg:justify-between px-8 z-10 ">
+      <div className="absolute inset-0 flex  lg:flex-row items-center lg:justify-between px-4 z-10 ">
         {/* Left Side */}
         <div className="text-left w-full sm:w-1/2 flex flex-col justify-center space-y-4 pl-12 ">
           <p className="text-white text-2xl">Welcome to </p>

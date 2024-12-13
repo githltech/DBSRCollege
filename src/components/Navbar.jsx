@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { FaChevronDown, FaBars } from "react-icons/fa";
+import { FaChevronDown, FaBars, FaUser } from "react-icons/fa"; // Importing the FaUser icon
 import { IoMdArrowDropright } from "react-icons/io";
 import { Link } from "react-router-dom";
-import loginimg from "../images/GallrayImages/Gallary1.jpg";
+import loginimg from "../images/DBSR.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-  const [activeForm, setActiveForm] = useState("login"); // State to toggle between login and signup
+  const [activeForm, setActiveForm] = useState("login");
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => {  
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -113,10 +113,10 @@ const Navbar = () => {
 
           <div className="hidden lg:flex items-center space-x-4 relative">
             <button
-              className="px-4 py-2 rounded-lg hover:bg-black bg-red-600 duration-500 font-semibold"
+              className="flex items-center px-4 py-2 rounded-lg hover:bg-black bg-red-600 duration-500 font-semibold"
               onClick={toggleLoginModal}
             >
-              Login
+              <FaUser className="mr-2" /> Login {/* Added FaUser icon */}
             </button>
           </div>
 
@@ -165,25 +165,53 @@ const Navbar = () => {
       </nav>
 
       {isLoginModalOpen && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 border ">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 border rounded">
           <div className="bg-white rounded-lg shadow-lg w-[90%] max-w-3xl flex">
-            <div className="hidden lg:block w-1/2 bg-gray-200 p-6 flex flex-col items-center">
-              <div className="flex space-x-4 mb-6">
-                
-                
-              </div>
+            <div className="hidden lg:block w-1/2 bg-gray-200 p-2 flex flex-col items-center">
               <img
                 src={loginimg}
                 alt="Placeholder"
-                className="w-auto h-max"
+                className="w-full h-full object-cover"
               />
             </div>
 
-            <div className="w-full lg:w-1/2 p-6 relative">
+            <div className="w-full lg:w-1/2 p-8 relative ">
+              <div className="flex justify-center space-x-4 mb-4">
+                <button
+                  onClick={() => setActiveForm("login")}
+                  className={`px-4 py-2 font-semibold rounded-lg ${
+                    activeForm === "login" ? "bg-red-600 text-white" : "bg-gray-200 text-black"
+                  }`}
+                >
+                  Login
+                </button>
+                <button
+                  onClick={() => setActiveForm("signup")}
+                  className={`px-4 py-2 font-semibold rounded-lg ${
+                    activeForm === "signup" ? "bg-red-600 text-white" : "bg-gray-200 text-black"
+                  }`}
+                >
+                  Signup
+                </button>
+              </div>
+
               {activeForm === "login" ? (
                 <>
                   <h2 className="text-xl font-bold mb-4">Login</h2>
                   <form>
+                    <div className="mb-4">
+                      <label htmlFor="name" className="block text-sm font-medium mb-1">
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        className="w-full border rounded-lg px-3 py-2"
+                        placeholder="Enter your name"
+                        required
+                      />
+                    </div>
+
                     <div className="mb-4">
                       <label htmlFor="email" className="block text-sm font-medium mb-1">
                         Email
@@ -273,9 +301,9 @@ const Navbar = () => {
 
               <button
                 onClick={() => setIsLoginModalOpen(false)}
-                className="absolute top-2 right-2 text-gray-500 hover:text-black text-xl"
+                className="absolute top-2 right-2 text-gray-500 hover:text-black text-xl bg-transparent"
               >
-                &times;
+                X
               </button>
             </div>
           </div>
