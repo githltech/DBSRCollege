@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import { FaChevronDown, FaBars } from "react-icons/fa";
 import { IoMdArrowDropright } from "react-icons/io";
 import { Link } from "react-router-dom";
+import loginimg from "../images/GallrayImages/Gallary1.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [activeForm, setActiveForm] = useState("login"); // State to toggle between login and signup
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,52 +52,107 @@ const Navbar = () => {
     setOpenDropdown(openDropdown === index ? null : index);
   };
 
+  const toggleLoginModal = () => {
+    setIsLoginModalOpen(!isLoginModalOpen);
+  };
+
   return (
-    <nav
-      className={`sticky top-0 z-30 transition-colors duration-300 ${
-        isScrolled ? "bg-white text-black" : "bg-[#2B334F] text-white"
-      }`}
-    >
-      <div className="px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-4">
-          <a href="/" className="">
-            <img
-              src="https://dbsrcollege.in/wp-content/uploads/2023/03/DBSRlogo_PJ.webp"
-              alt="Dbsr Logo"
-              className="h-8 bg-white"
-            />
-          </a>
-          <h1 className="block lg:hidden text-sm sm:text-xl md:text-2xl font-semibold">
-            Dr. Bhagat Singh Rai Institute of technology
-          </h1>
+    <>
+      <nav
+        className={`sticky top-0 z-30 transition-colors duration-300 ${
+          isScrolled ? "bg-white text-black" : "bg-[#2B334F] text-white"
+        }`}
+      >
+        <div className="px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <a href="/" className="">
+              <img
+                src="https://dbsrcollege.in/wp-content/uploads/2023/03/DBSRlogo_PJ.webp"
+                alt="Dbsr Logo"
+                className="h-8 bg-white"
+              />
+            </a>
+            <h1 className="block lg:hidden text-sm sm:text-xl md:text-2xl font-semibold">
+              Dr. Bhagat Singh Rai Institute of technology
+            </h1>
+          </div>
+
+          <div className="hidden lg:flex items-center justify-center mx-10 space-x-6 flex-grow">
+            {menuItems
+              .filter((item) => item.name !== "LOGIN")
+              .map((item, index) => (
+                <div key={index} className="group relative">
+                  <button
+                    className={`flex items-center text-sm ${
+                      isScrolled ? "text-black" : "text-white"
+                    }`}
+                  >
+                    {item.name} {item.subItems && <FaChevronDown className="ml-1 text-sm" />}
+                  </button>
+                  {item.subItems && (
+                    <div
+                      className={`absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-[0.5s] ${
+                        isScrolled ? "bg-gray-100 text-black" : "bg-white text-gray-800"
+                      } mt-1 py-2 w-44 shadow-lg font-semibold border-2 border-t-red-600 text-[12px]`}
+                    >
+                      {item.subItems.map((subItem, subIndex) => (
+                        <Link
+                          to={subItem.href}
+                          key={subIndex}
+                          className="block px-4 py-1 hover:bg-black/80 hover:text-white flex items-center gap-1"
+                        >
+                          <IoMdArrowDropright />
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+          </div>
+
+          <div className="hidden lg:flex items-center space-x-4 relative">
+            <button
+              className="px-4 py-2 rounded-lg hover:bg-black bg-red-600 duration-500 font-semibold"
+              onClick={toggleLoginModal}
+            >
+              Login
+            </button>
+          </div>
+
+          <div className="lg:hidden">
+            <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
+              <FaBars className={`${isScrolled ? "text-black" : "text-white"}`} />
+            </button>
+          </div>
         </div>
 
-        {/* Wrapper for menu items with margin adjustments */}
-        <div className="hidden lg:flex items-center justify-center mx-10 space-x-6 flex-grow">
-          {menuItems
-            .filter((item) => item.name !== "LOGIN") // Remove LOGIN menu for large screens
-            .map((item, index) => (
-              <div key={index} className="group relative">
+        {isOpen && (
+          <div
+            className={`lg:hidden font-bold ${
+              isScrolled ? "bg-white text-black" : "bg-[#2B334F] text-white"
+            }`}
+          >
+            {menuItems.map((item, index) => (
+              <div key={index} className="border-t border-purple-800 hover:bg-black/80">
                 <button
-                  className={`flex items-center text-sm ${
-                    isScrolled ? "text-black" : "text-white"
-                  }`}
+                  onClick={() => handleDropdownToggle(index)}
+                  className="w-full flex justify-between items-center px-4 py-2"
                 >
-                  {item.name} {item.subItems && <FaChevronDown className="ml-1 text-sm" />}
+                  <span className={`${isScrolled ? "text-black" : "text-white"}`}>{item.name}</span>
+                  {item.subItems && <FaChevronDown className="text-xs" />}
                 </button>
-                {item.subItems && (
+                {openDropdown === index && item.subItems && (
                   <div
-                    className={`absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-[0.5s] ${
-                      isScrolled ? "bg-gray-100 text-black" : "bg-white text-gray-800"
-                    } mt-1 py-2 w-44 shadow-lg font-semibold border-2 border-t-red-600 text-[12px]`}
+                    className={`${isScrolled ? "bg-gray-100 text-black" : "bg-white text-black"} text-[15px]`}
                   >
                     {item.subItems.map((subItem, subIndex) => (
                       <Link
                         to={subItem.href}
                         key={subIndex}
-                        className="block px-4 py-1 hover:bg-black/80 hover:text-white flex items-center gap-1"
+                        className="block px-4 py-1 hover:bg-gray-400 flex items-center gap-1"
                       >
-                        <IoMdArrowDropright />
+                        <IoMdArrowDropright className="mt-[2px]" />
                         {subItem.name}
                       </Link>
                     ))}
@@ -102,51 +160,128 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-        </div>
+          </div>
+        )}
+      </nav>
 
-        <div className="hidden lg:flex items-center space-x-4 relative">
-          <a className="px-4 py-2 rounded-lg hover:bg-black bg-red-600 duration-500 font-semibold" href="/">
-            Login
-          </a>
-        </div>
-
-        <div className="lg:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
-            <FaBars className={`${isScrolled ? "text-black" : "text-white"}`} />
-          </button>
-        </div>
-      </div>
-
-      {isOpen && (
-        <div className={`lg:hidden font-bold ${isScrolled ? "bg-white text-black" : "bg-[#2B334F] text-white"}`}>
-          {menuItems.map((item, index) => (
-            <div key={index} className="border-t border-purple-800 hover:bg-black/80">
-              <button
-                onClick={() => handleDropdownToggle(index)}
-                className="w-full flex justify-between items-center px-4 py-2"
-              >
-                <span className={`${isScrolled ? "text-black" : "text-white"}`}>{item.name}</span>
-                {item.subItems && <FaChevronDown className="text-xs" />}
-              </button>
-              {openDropdown === index && item.subItems && (
-                <div className={`${isScrolled ? "bg-gray-100 text-black" : "bg-white text-black"} text-[15px]`}>
-                  {item.subItems.map((subItem, subIndex) => (
-                    <Link
-                      to={subItem.href}
-                      key={subIndex}
-                      className="block px-4 py-1 hover:bg-gray-400 flex items-center gap-1"
-                    >
-                      <IoMdArrowDropright className="mt-[2px]" />
-                      {subItem.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
+      {isLoginModalOpen && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 border ">
+          <div className="bg-white rounded-lg shadow-lg w-[90%] max-w-3xl flex">
+            <div className="hidden lg:block w-1/2 bg-gray-200 p-6 flex flex-col items-center">
+              <div className="flex space-x-4 mb-6">
+                
+                
+              </div>
+              <img
+                src={loginimg}
+                alt="Placeholder"
+                className="w-auto h-max"
+              />
             </div>
-          ))}
+
+            <div className="w-full lg:w-1/2 p-6 relative">
+              {activeForm === "login" ? (
+                <>
+                  <h2 className="text-xl font-bold mb-4">Login</h2>
+                  <form>
+                    <div className="mb-4">
+                      <label htmlFor="email" className="block text-sm font-medium mb-1">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        className="w-full border rounded-lg px-3 py-2"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+
+                    <div className="mb-4">
+                      <label htmlFor="password" className="block text-sm font-medium mb-1">
+                        Password
+                      </label>
+                      <input
+                        type="password"
+                        id="password"
+                        className="w-full border rounded-lg px-3 py-2"
+                        placeholder="Enter your password"
+                        required
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition"
+                    >
+                      Login
+                    </button>
+                  </form>
+                </>
+              ) : (
+                <>
+                  <h2 className="text-xl font-bold mb-4">Signup</h2>
+                  <form>
+                    <div className="mb-4">
+                      <label htmlFor="name" className="block text-sm font-medium mb-1">
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        className="w-full border rounded-lg px-3 py-2"
+                        placeholder="Enter your name"
+                        required
+                      />
+                    </div>
+
+                    <div className="mb-4">
+                      <label htmlFor="email" className="block text-sm font-medium mb-1">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        className="w-full border rounded-lg px-3 py-2"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+
+                    <div className="mb-4">
+                      <label htmlFor="password" className="block text-sm font-medium mb-1">
+                        Password
+                      </label>
+                      <input
+                        type="password"
+                        id="password"
+                        className="w-full border rounded-lg px-3 py-2"
+                        placeholder="Create a password"
+                        required
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition"
+                    >
+                      Signup
+                    </button>
+                  </form>
+                </>
+              )}
+
+              <button
+                onClick={() => setIsLoginModalOpen(false)}
+                className="absolute top-2 right-2 text-gray-500 hover:text-black text-xl"
+              >
+                &times;
+              </button>
+            </div>
+          </div>
         </div>
       )}
-    </nav>
+    </>
   );
 };
 

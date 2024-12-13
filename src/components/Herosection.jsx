@@ -43,10 +43,13 @@ const HeroSection = () => {
       <div className="absolute inset-0 flex  lg:flex-row items-center lg:justify-between px-8 z-10 ">
         {/* Left Side */}
         <div className="text-left w-full sm:w-1/2 flex flex-col justify-center space-y-4 pl-12 ">
-          <hr className="border-t-2 border-orange-500 w-32" />
-          <p className="text-white text-2xl">Welcome to DBSR University</p>
+          <p className="text-white text-2xl">Welcome to </p>
+          <hr className="border-t-2 border-orange-500 w-28" />
           <h1 className="text-7xl md:text-6xl  lg:text-8xl text-white font-bold leading-snug">
-            ABOUT <br /> UNIVERSITY
+
+          DBSR<br /> UNIVERSITY
+          <hr className="border-t-2 border-orange-500 w-74" />
+
           </h1>
           <p className="text-white text-lg sm:text-xl font-semibold">
             Empowering the leaders of tomorrow with world-class education.
