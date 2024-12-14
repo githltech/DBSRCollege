@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { FaChevronDown, FaBars, FaUser } from "react-icons/fa"; // Importing the FaUser icon
+import { FaChevronDown, FaBars, FaUser } from "react-icons/fa";
 import { IoMdArrowDropright } from "react-icons/io";
 import { Link } from "react-router-dom";
-import loginimg from "../images/DBSR.jpg";
+import whiteLogo from "../images/DBSRWhiteLogo.jpg"; // Logo with white color and #2B334F background
+import blueLogo from "../images/DBSRBluelogo.jpg"; // Logo with #2B334F color and white background
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
   const [activeForm, setActiveForm] = useState("login");
 
   useEffect(() => {
-    const handleScroll = () => {  
+    const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -67,13 +68,13 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
             <a href="/" className="">
               <img
-                src="https://dbsrcollege.in/wp-content/uploads/2023/03/DBSRlogo_PJ.webp"
+                src={isScrolled ? blueLogo : whiteLogo} // Dynamically switch logo
                 alt="Dbsr Logo"
-                className="h-8 bg-white"
+                className="h-8"
               />
             </a>
             <h1 className="block lg:hidden text-sm sm:text-xl md:text-2xl font-semibold">
-              Dr. Bhagat Singh Rai Institute of technology
+              Dr. Bhagat Singh Rai Institute of Technology
             </h1>
           </div>
 
@@ -113,10 +114,12 @@ const Navbar = () => {
 
           <div className="hidden lg:flex items-center space-x-4 relative">
             <button
-              className="flex items-center px-4 py-2 rounded-lg hover:bg-black bg-red-600 duration-500 font-semibold"
+              className={`flex items-center px-4 py-2 rounded-lg duration-500 font-semibold ${
+                isScrolled ? "bg-black text-white hover:bg-gray-800" : "bg-red-600 text-white hover:bg-black"
+              }`}
               onClick={toggleLoginModal}
             >
-              <FaUser className="mr-2" /> Login {/* Added FaUser icon */}
+              <FaUser className="mr-2" /> Login
             </button>
           </div>
 
@@ -169,13 +172,13 @@ const Navbar = () => {
           <div className="bg-white rounded-lg shadow-lg w-[90%] max-w-3xl flex">
             <div className="hidden lg:block w-1/2 bg-gray-200 p-2 flex flex-col items-center">
               <img
-                src={loginimg}
+                src={whiteLogo}
                 alt="Placeholder"
                 className="w-full h-full object-cover"
               />
             </div>
 
-            <div className="w-full lg:w-1/2 p-8 relative ">
+            <div className="w-full lg:w-1/2 p-8 relative">
               <div className="flex justify-center space-x-4 mb-4">
                 <button
                   onClick={() => setActiveForm("login")}

@@ -40,30 +40,28 @@ const HeroSection = () => {
   return (
     <div>
       {/* Static Left Side Content */}
-      <div className="absolute inset-0 flex  lg:flex-row items-center lg:justify-between px-4 z-10 ">
+      <div className="absolute inset-0 flex flex-col lg:flex-row items-start lg:items-center lg:justify-between px-4 z-10">
         {/* Left Side */}
-        <div className="text-left w-full sm:w-1/2 flex flex-col justify-center space-y-4 pl-12 ">
-          <p className="text-white text-2xl">Welcome to </p>
-          <hr className="border-t-2 border-orange-500 w-28" />
-          <h1 className="text-7xl md:text-6xl  lg:text-8xl text-white font-bold leading-snug">
-
-          DBSR<br /> UNIVERSITY
-          <hr className="border-t-2 border-orange-500 w-74" />
-
+        <div className="text-left w-full sm:w-1/2 flex flex-col justify-center space-y-4 pl-4 sm:pl-8 md:pl-12">
+          <p className="text-white text-xl sm:text-2xl">Welcome to </p>
+          <hr className="border-t-2 border-orange-500 w-20 sm:w-28" />
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold leading-snug">
+            DBSR<br /> UNIVERSITY
+            <hr className="border-t-2 border-orange-500 w-16 sm:w-24 md:w-32" />
           </h1>
-          <p className="text-white text-lg sm:text-xl font-semibold">
+          <p className="text-white text-base sm:text-lg md:text-xl font-semibold">
             Empowering the leaders of tomorrow with world-class education.
           </p>
           <a
             href="/"
-            className="w-40 bg-red-700 text-white px-3 py-2 rounded-md text-lg font-semibold hover:bg-black transition duration-300"
+            className="w-32 sm:w-40 bg-red-700 text-white px-3 py-2 rounded-md text-sm sm:text-lg font-semibold hover:bg-black transition duration-300"
           >
-            Get Started&rarr;
+            Get Started &rarr;
           </a>
         </div>
 
         {/* Form Section */}
-        <div className="hidden lg:block  w-full sm:w-1/3 bg-transparent -opacity--20 p-8 rounded-lg shadow-lg border-2 border-[#2B334F]">
+        <div className="hidden lg:block w-full sm:w-1/3 bg-transparent p-8 rounded-lg shadow-lg border-2 border-[#2B334F]">
           <h2 className="text-2xl font-bold text-[#2B334F] mb-6 text-center">
             Application Form
           </h2>
@@ -102,18 +100,19 @@ const HeroSection = () => {
 
       {/* Image Slider */}
       <div>
-        <Slider {...settings}>
-          {slides.map((slide) => (
-            <div key={slide.id} className="relative ">
-              <img
-                src={slide.image}
-                alt={`Slide ${slide.id}`}
-                className="w-full h-[100vh] sm:max-h-fit lg:min-h-[80vh] object-cover "
-              />
-            </div>
-          ))}
-        </Slider>
+  <Slider {...settings}>
+    {slides.map((slide) => (
+      <div key={slide.id} className="relative">
+        <img
+          src={slide.image}
+          alt={`Slide ${slide.id}`}
+          className="w-full h-[70vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] object-cover object-center sm:object-top md:object-center lg:object-bottom"
+        />
       </div>
+    ))}
+  </Slider>
+</div>
+
     </div>
   );
 };
