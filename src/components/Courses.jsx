@@ -54,7 +54,7 @@ const Courses = () => {
   return (
     <section className="relative bg-cover bg-center  text-white h-96" style={{ backgroundImage: "url('https://templates.envytheme.com/unco/default/assets/images/banner/banner-img-1.jpg')" }}>
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-[#172f41] opacity-90"></div>
+      <div className="absolute inset-0 bg-black opacity-90"></div>
 
       {/* Content */}
       <div className="z-10 relative max-w-5xl mx-auto h-full flex flex-col justify-center">

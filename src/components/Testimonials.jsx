@@ -20,7 +20,7 @@ const Testimonials = () => {
         <div className="bg-white p-6 rounded-md shadow-lg shadow-pink-100 w-full border border-gray-400">
           <div className="relative mb-4">
             {/* Card Up (Top Section) */}
-            <div className="h-32 overflow-hidden rounded-t-lg bg-[#2B334F]"></div>
+            <div className="h-32 overflow-hidden rounded-t-lg bg-black"></div>
 
             {/* Avatar */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 border-4 border-white rounded-full overflow-hidden">
@@ -45,7 +45,7 @@ const Testimonials = () => {
         <div className="bg-white p-6 rounded-md shadow-lg shadow-pink-100 w-full border border-gray-400">
           <div className="relative mb-4">
             {/* Card Up (Top Section) */}
-            <div className="h-32 overflow-hidden rounded-t-lg bg-[#2B334F]"></div>
+            <div className="h-32 overflow-hidden rounded-t-lg bg-black"></div>
 
             {/* Avatar */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 border-4 border-white rounded-full overflow-hidden">
@@ -69,7 +69,7 @@ const Testimonials = () => {
         <div className="bg-white p-6 rounded-md shadow-lg shadow-pink-100 w-full border border-gray-400">
           <div className="relative mb-4">
             {/* Card Up (Top Section) */}
-            <div className="h-32 overflow-hidden rounded-t-lg bg-[#2B334F]"></div>
+            <div className="h-32 overflow-hidden rounded-t-lg bg-black"></div>
 
             {/* Avatar */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 border-4 border-white rounded-full overflow-hidden">

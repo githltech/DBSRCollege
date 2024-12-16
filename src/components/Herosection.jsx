@@ -46,7 +46,7 @@ const HeroSection = () => {
           <p className="text-white text-xl sm:text-2xl">Welcome to </p>
           <hr className="border-t-2 border-orange-500 w-20 sm:w-28" />
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold leading-snug">
-            DBSR<br /> UNIVERSITY
+            DBSR<br />COLLEGE
             <hr className="border-t-2 border-orange-500 w-16 sm:w-24 md:w-32" />
           </h1>
           <p className="text-white text-base sm:text-lg md:text-xl font-semibold">

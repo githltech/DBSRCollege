@@ -44,7 +44,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="bg-[#2B334F] text-white py-10 lg:px-24" id="newGall">
+    <div className="bg-black text-white py-10 lg:px-24" id="newGall">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-semibold text-center mb-8">DBSR Gallery</h2>
       </div>

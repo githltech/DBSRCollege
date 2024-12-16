@@ -61,7 +61,7 @@ const Navbar = () => {
     <>
       <nav
         className={`sticky top-0 z-30 transition-colors duration-300 ${
-          isScrolled ? "bg-white text-black" : "bg-[#2B334F] text-white"
+          isScrolled ? "bg-black text-white" : "bg-[#2B334F] text-white"
         }`}
       >
         <div className="px-4 py-4 flex items-center justify-between">
@@ -85,7 +85,7 @@ const Navbar = () => {
                 <div key={index} className="group relative">
                   <button
                     className={`flex items-center text-sm ${
-                      isScrolled ? "text-black" : "text-white"
+                      isScrolled ? "text-white" : "text-white"
                     }`}
                   >
                     {item.name} {item.subItems && <FaChevronDown className="ml-1 text-sm" />}
@@ -93,7 +93,7 @@ const Navbar = () => {
                   {item.subItems && (
                     <div
                       className={`absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-[0.5s] ${
-                        isScrolled ? "bg-gray-100 text-black" : "bg-white text-gray-800"
+                        isScrolled ? "bg-gray-800 text-white" : "bg-white text-gray-800"
                       } mt-1 py-2 w-44 shadow-lg font-semibold border-2 border-t-red-600 text-[12px]`}
                     >
                       {item.subItems.map((subItem, subIndex) => (
@@ -115,7 +115,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-4 relative">
             <button
               className={`flex items-center px-4 py-2 rounded-lg duration-500 font-semibold ${
-                isScrolled ? "bg-black text-white hover:bg-gray-800" : "bg-red-600 text-white hover:bg-black"
+                isScrolled ? "bg-white text-black hover:bg-red-800" : "bg-red-600 text-white hover:bg-black"
               }`}
               onClick={toggleLoginModal}
             >
@@ -125,7 +125,7 @@ const Navbar = () => {
 
           <div className="lg:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
-              <FaBars className={`${isScrolled ? "text-black" : "text-white"}`} />
+              <FaBars className={`${isScrolled ? "text-white" : "text-white"}`} />
             </button>
           </div>
         </div>
@@ -133,7 +133,7 @@ const Navbar = () => {
         {isOpen && (
           <div
             className={`lg:hidden font-bold ${
-              isScrolled ? "bg-white text-black" : "bg-[#2B334F] text-white"
+              isScrolled ? "bg-black text-white" : "bg-[#2B334F] text-white"
             }`}
           >
             {menuItems.map((item, index) => (
@@ -142,12 +142,12 @@ const Navbar = () => {
                   onClick={() => handleDropdownToggle(index)}
                   className="w-full flex justify-between items-center px-4 py-2"
                 >
-                  <span className={`${isScrolled ? "text-black" : "text-white"}`}>{item.name}</span>
+                  <span className={`${isScrolled ? "text-white" : "text-white"}`}>{item.name}</span>
                   {item.subItems && <FaChevronDown className="text-xs" />}
                 </button>
                 {openDropdown === index && item.subItems && (
                   <div
-                    className={`${isScrolled ? "bg-gray-100 text-black" : "bg-white text-black"} text-[15px]`}
+                    className={`${isScrolled ? "bg-gray-800 text-white" : "bg-white text-black"} text-[15px]`}
                   >
                     {item.subItems.map((subItem, subIndex) => (
                       <Link
