@@ -22,21 +22,21 @@ import Gallery from "./components/Gallary";
 
 const  App = ()  =>{
 
-  // useEffect(() => {
-  //   const handleContextMenu = (event) => {
-  //     event.preventDefault();
-  //   };
-  //   document.addEventListener("contextmenu", handleContextMenu);
-  //   return () => {
-  //     document.removeEventListener("contextmenu", handleContextMenu);
-  //   };
+  useEffect(() => {
+    const handleContextMenu = (event) => {
+      event.preventDefault();
+    };
+    document.addEventListener("contextmenu", handleContextMenu);
+    return () => {
+      document.removeEventListener("contextmenu", handleContextMenu);
+    };
     
-  // }, []);
+  }, []);
   
 
   return (
     <>
-    <Router basename="/DBSRCollege">
+    <Router basename="/DBSRCollege"> // 
       <Routes>
         <Route path='aboutus' element = {<AboutUsPage/>}/>
         <Route path='/rvrentalform' element = {<RVRentalForm/>}/>
