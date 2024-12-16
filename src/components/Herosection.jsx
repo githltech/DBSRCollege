@@ -38,11 +38,11 @@ const HeroSection = () => {
   };
 
   return (
-    <div>
+    <div className="relative">
       {/* Static Left Side Content */}
       <div className="absolute inset-0 flex flex-col lg:flex-row items-start lg:items-center lg:justify-between px-4 z-10">
         {/* Left Side */}
-        <div className="text-left w-full sm:w-1/2 flex flex-col justify-center space-y-4 pl-4 sm:pl-8 md:pl-12">
+        <div className="text-left w-full sm:w-1/2 flex flex-col justify-center space-y-4 pl-4 sm:pl-8 md:pl-12 sm:items-start sm:justify-center md:items-start md:justify-center">
           <p className="text-white text-xl sm:text-2xl">Welcome to </p>
           <hr className="border-t-2 border-orange-500 w-20 sm:w-28" />
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold leading-snug">
@@ -100,19 +100,18 @@ const HeroSection = () => {
 
       {/* Image Slider */}
       <div>
-  <Slider {...settings}>
-    {slides.map((slide) => (
-      <div key={slide.id} className="relative">
-        <img
-          src={slide.image}
-          alt={`Slide ${slide.id}`}
-          className="w-full h-[70vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] object-cover object-center sm:object-top md:object-center lg:object-bottom"
-        />
+        <Slider {...settings}>
+          {slides.map((slide) => (
+            <div key={slide.id} className="relative">
+              <img
+                src={slide.image}
+                alt={`Slide ${slide.id}`}
+                className="w-full h-[70vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] object-cover object-center sm:object-top md:object-center lg:object-bottom"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
-    ))}
-  </Slider>
-</div>
-
     </div>
   );
 };
